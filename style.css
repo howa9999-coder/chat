@@ -41,7 +41,7 @@ body {
     width: 70%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align messages to the left */
+    align-items: flex-start; 
   }
   
   .person {
@@ -68,16 +68,15 @@ body {
   
   li {
     position: relative;
-    /* margin-right: 5%; */
     margin-left: 2%;
     margin-bottom: 10px;
-    font-size: var(--space-2xs) ;
+    font-size: var(--space-xs) ;
 
   }
   li::marker {
-    color: pink; /* Change bullet color to pink */
-    text-shadow: 0 0 30px pink; /* Add a glow effect */
-    font-size: var(--space-s); /* Optional: Enlarge the bullet */
+    color: pink; 
+    text-shadow: 0 0 30px pink; 
+    font-size: var(--space-s); 
   }
 
   .arrow {
@@ -101,60 +100,36 @@ body {
     height: 100%;
 
   }
-  /*
-@media(max-width:650px){
+
+@media(max-width:850px){
    
     img{
         position: absolute;
         margin-left: 10px;
-        top: -10px;
-        right: -10px;
-        height: 50%;
+        top: -20px;
+        right: -25px;
+        height: 60px;
     
       }
-}*/
-@media(max-width:650px){
-   
-    img{
-        position: absolute;
-        margin-left: 10px;
-        top: -10px;
-        right: -20px;
-        height: 50px;
     
-      }
-      .message{
-        padding-right: 2px;
-      }
       li {
         position: relative;
-        margin-left: 2%;
+        margin-left: 5%;
         margin-bottom: 10px;
-        font-size: var(--space-s) ;
+        font-size: var(--space-xs) ;
     
       }
       .arrow {
-        position: absolute;
         top: 97%;
         left: 8%;
-        width: 0;
-        height: 0;
-        border-top: 30px solid #ffff;
-        transform: rotate(25deg);
-        border-bottom: 10px solid transparent;
-        border-right: 10px solid transparent;
-        border-left: 10px solid transparent;
     
       }
 
 }
-@media(max-width:500px){
+@media(max-width:600px){
       .message {
-        background-color:#f4fafa;
-        color: black;
-        padding: 0px;
-        position: relative;
-        border-radius: 10% !important;
+        border-radius: 20px !important;
+        border-top-right-radius: 10px !important;
       padding-right: 5%;
        
      
