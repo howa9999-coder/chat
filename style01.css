@@ -1,0 +1,226 @@
+
+body {
+    justify-content: center;
+  
+      font-family: Arial, sans-serif;
+      background-color: #ecceeb;
+      display: flex;
+      height: 100vh;
+      margin: 0;
+      direction: rtl;
+      
+    }
+    
+    .container {
+        width: 90%;
+        display: flex;
+        align-items: center; 
+      }
+    
+/*container 02*/
+.container02{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid purple;
+    border-radius: 15px;
+    width: 100%;
+  }
+  .title-container{
+    display: flex;
+    position: relative;
+    top: -2px;
+    justify-content: center;
+    border: 2px solid pink;
+    background-color: white;
+    padding: 4px 6px;
+    width: 60%;
+    border-radius: 50px;
+  }
+  .title{
+    text-align: center;
+    font-size: larger;
+  }
+  .name{
+    color: #a305e2;
+    font-weight: bolder;
+  }
+  .info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  
+  .info01, .info02 {
+    padding: 20px;
+    padding-bottom: 0px !important;
+    flex: 2;
+    display: flex; 
+    gap: 10px; 
+  }
+  .icon {
+    position: relative;
+    top: 0;
+    transform: scale(0.5) translateY(-50px) ;
+  
+}
+  
+   p {
+    margin: 0; 
+    font-size: 20px; 
+    color: #333;
+  }
+  
+  
+  
+  
+   
+  /*start*/
+  .star {
+    display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px;
+    width: 15px;
+    height: 15px;
+    background-color: #ffd700; 
+    clip-path: polygon(
+      50% 0%, 
+      61% 35%, 
+      98% 35%, 
+      68% 57%, 
+      79% 91%, 
+      50% 70%, 
+      21% 91%, 
+      32% 57%, 
+      2% 35%, 
+      39% 35%
+    ); 
+    box-shadow: 30px 20px 50px  #ffd700; 
+  }
+  
+  /*Dashed line*/
+  .line-container {
+    position: relative;
+    width: 1.5px;
+    height: 70px;
+    display: inline-block;
+   
+   
+    
+  }
+  .dashed-line {
+    position: relative;
+    width: 1.5px; 
+    height: 100%;
+    background: repeating-linear-gradient(
+      to bottom,
+      #a305e2,
+      #a305e2 3px,
+      transparent 3px,
+      transparent 6px
+    ); 
+  }
+  
+  .line-container::before,
+  .line-container::after {
+    content: '';
+    position: absolute;
+    width: 3px; 
+    height: 3px;
+    background-color: transparent; 
+    border-radius: 50%; 
+    border: 1.5px solid #a305e2;
+  }
+  
+  .line-container::before {
+    top: -6.5px; 
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .line-container::after {
+    bottom: -4px; 
+    left: 50%; 
+    transform: translateX(-50%);
+  }
+
+  @media(max-width:700px){
+ 
+    .info{
+        display: flex;
+        flex-direction: column-reverse; /*or column*/
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+      
+      }
+      .icon {
+        position: relative;
+        top: -0px;
+        transform: scale(1) translateY(0)  ;
+        height: 40px;
+        width: 40px;
+}
+
+        .info01, .info02 {
+            padding: 10px !important;          
+            flex: 2;
+            display: flex; 
+            align-self: start; /*or center*/
+            gap: 20px; 
+            min-height: 70px;
+          }
+
+      .title-container{
+        top: -20px;
+        width: 80%;
+      }
+      .title{
+        font-weight: 300;
+        font-size: medium;
+      }
+      .name{
+        display: block;
+      }
+      .line-container {
+        width: 225px; 
+        height: 1.5px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+      }
+    
+      .dashed-line {
+        width: 100%;
+        height: 1.5px; 
+        background: repeating-linear-gradient(
+          to right, 
+          #a305e2,
+          #a305e2 3px,
+          transparent 3px,
+          transparent 6px
+        ); 
+      }
+    
+      .line-container::before {
+        top: 50%;
+        left: -6.5px; 
+        transform: translateY(-50%);
+      }
+    
+      .line-container::after {
+        top: 50%;
+        right: -4px; 
+        transform: translateY(-50%);
+      }
+      .star {
+      margin-left: 10%;
+      margin-right: 10%;
+      transform: translateY(50%);
+        width: 15px;
+        height: 15px;
+      }
+
+  }
