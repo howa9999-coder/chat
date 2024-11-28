@@ -145,7 +145,7 @@ body {
 
   @media(max-width:700px){
       .container {
-        width: 70%;
+        width: 90%;
       }
  
     .info{
@@ -175,7 +175,7 @@ body {
 
       .title-container{
         top: -20px;
-        width: 80%;
+        width: 100%;
       }
       .title{
         font-weight: 300;
