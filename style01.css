@@ -12,7 +12,7 @@ body {
     }
     
     .container {
-        width: 90%;
+        width: 70%;
         display: flex;
         align-items: center; 
       }
@@ -41,10 +41,10 @@ body {
   .title{
     text-align: center;
     font-size: larger;
+    font-weight: bolder;
   }
   .name{
     color: #a305e2;
-    font-weight: bolder;
   }
   .info{
     display: flex;
@@ -94,7 +94,7 @@ body {
       2% 35%, 
       39% 35%
     ); 
-    box-shadow: 30px 20px 50px  #ffd700; 
+  /*  box-shadow: 30px 20px 50px  #ffd700; */
   }
   
   /*Dashed line*/
@@ -144,6 +144,9 @@ body {
   }
 
   @media(max-width:700px){
+      .container {
+        width: 70%;
+      }
  
     .info{
         display: flex;
