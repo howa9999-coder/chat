@@ -99,7 +99,7 @@ body {
   
    p {
     margin: 0; 
-    font-size: 20px; 
+    font-size: 16px; 
     color: #333;
   }
   .star{
@@ -186,7 +186,7 @@ body {
         width: 80%;
       }
       .title{
-        font-weight: 300;
+        font-weight: 400;
         font-size: medium;
       }
       .name{
@@ -221,5 +221,4 @@ body {
         right: -4px; 
         transform: translateY(-50%);
       }
-
   }
