@@ -53,7 +53,7 @@ body {
     width: 100%;
   }
   
-  
+ 
   .info01, .info02 {
     padding: 20px;
     padding-bottom: 0px !important;
@@ -61,12 +61,11 @@ body {
     display: flex; 
     gap: 10px; 
   }
-  .icon {
-    position: relative;
-    top: 0;
-    transform: scale(0.5) translateY(-50px) ;
-  
-}
+  .info01::before, .info02::before{
+    content: url(دورة\ التجويد\ \(63\).png);
+    display: inline;
+    transform: scale(0.5) translateY(-50%);
+  }
   
    p {
     margin: 0; 
@@ -74,10 +73,6 @@ body {
     color: #333;
   }
   
-  
-  
-  
-   
   /*star*/
   .star {
     display: inline-block;
@@ -146,35 +141,30 @@ body {
     left: 50%; 
     transform: translateX(-50%);
   }
- @media(max-width:950px){
-      .container {
-        width: 95%;
-      }
-    }
-  @media(max-width:700px){
-      .container {
-        width: 90%;
-      }
+
  
+@media(max-width: 900px){
+  .container{
+    width: 99%;
+  }
+}
+
+  @media(max-width:700px){
+    .container{
+      width: 95%;
+    }
     .info{
         display: flex;
         flex-direction: column; /*or column*/
-        justify-content: space-around;
         align-items: center;
         width: 100%;
       
       }
-   
-
-        .info01, .info02 {
-            padding: 10px !important;          
-            flex: 2;
-            display: flex; 
-            align-self: start; /*or center*/
-            gap: 20px; 
-            min-height: 70px;
-          }
-
+      .info01, .info02{
+        padding: 10px !important; 
+        align-items: start;
+        gap: 20px; 
+      }
       .title-container{
         top: -20px;
         width: 80%;
@@ -203,8 +193,7 @@ body {
           transparent 3px,
           transparent 6px
         ); 
-      }
-    
+      } 
       .line-container::before {
         top: 50%;
         left: -6.5px; 
