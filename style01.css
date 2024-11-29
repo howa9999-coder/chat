@@ -12,7 +12,7 @@ body {
     }
     
     .container {
-        width: 90%;
+        width: 70%;
         display: flex;
         align-items: center; 
       }
@@ -148,6 +148,9 @@ body {
   }
 
   @media(max-width:700px){
+      .container {
+        width: 90%;
+      }
  
     .info{
         display: flex;
