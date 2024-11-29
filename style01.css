@@ -12,7 +12,7 @@ body {
     }
     
     .container {
-        width: 70%;
+        width: 80%;
         display: flex;
         align-items: center; 
       }
@@ -29,9 +29,10 @@ body {
   }
   .title-container{
     display: flex;
+    justify-content: space-around;
+    align-items: center;
     position: relative;
     top: -2px;
-    justify-content: center;
     border: 2px solid pink;
     background-color: white;
     padding: 4px 6px;
@@ -41,6 +42,7 @@ body {
   .title{
     text-align: center;
     font-size: larger;
+ 
   }
   .name{
     color: #a305e2;
@@ -72,29 +74,15 @@ body {
     font-size: 20px; 
     color: #333;
   }
-  
-  /*star*/
-  .star {
-    display: inline-block;
-  margin-left: 5px;
-  margin-right: 5px;
-    width: 15px;
+  .star{
     height: 15px;
-    background-color: #ffd700; 
-    clip-path: polygon(
-      50% 0%, 
-      61% 35%, 
-      98% 35%, 
-      68% 57%, 
-      79% 91%, 
-      50% 70%, 
-      21% 91%, 
-      32% 57%, 
-      2% 35%, 
-      39% 35%
-    ); 
-    box-shadow: 30px 20px 50px  #ffd700; 
-  }
+    width: 15px;
+    background-color: transparent;
+    
+    filter: drop-shadow(0px 5px 5px rgb(237, 237, 14)); 
+
+  } 
+ 
   
   /*Dashed line*/
   .line-container {
@@ -143,7 +131,7 @@ body {
   }
 
  
-@media(max-width: 900px){
+@media(max-width: 1000px){
   .container{
     width: 99%;
   }
@@ -204,13 +192,6 @@ body {
         top: 50%;
         right: -4px; 
         transform: translateY(-50%);
-      }
-      .star {
-      margin-left: 10%;
-      margin-right: 10%;
-      transform: translateY(50%);
-        width: 15px;
-        height: 15px;
       }
 
   }
