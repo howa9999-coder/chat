@@ -1,0 +1,153 @@
+/*fonts*/
+@font-face {
+    font-family: 'MadaniArabic-Regular';
+    src: url('fonts/alfont_com_Madani-Arabic-Regular.ttf') format('truetype');
+    font-weight: medium;
+    font-style: normal;
+    }
+    
+    @font-face {
+    font-family: 'MadaniArabic-Medium';
+    src: url('fonts/alfont_com_Madani-Arabic-Medium.ttf') format('truetype');
+    font-weight: medium;
+    font-style: normal;
+    }
+    @font-face {
+    font-family: 'MadaniArabic-Light';
+    src: url('fonts/alfont_com_Madani-Arabic-Light.ttf') format('truetype');
+    font-weight: medium;
+    font-style: normal;
+    }
+    @font-face {
+    font-family: 'Arimo';
+    src: url('fonts/Arimo-Italic.ttf') format('truetype');
+    font-weight: medium;
+    font-style: normal;
+    }
+/*var*/
+:root {
+    /*size*/
+    --size-xs: 14px  ;
+    --size-s: 19.6px;
+    --size-m: 22.2px;
+    --size-l: 25px;
+  }
+
+ body{
+    background-color: pink;
+
+    height: 120vh;
+} 
+/*=====================================>container & container01*/
+.container{
+    position: relative; /* Ensure <.line> stays in the correct position */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.container01{
+    position: relative;
+    padding: 0;
+    margin: 0;
+    width: fit-content;
+}
+
+.container01::before{
+    content: url('warning.png');
+    position: absolute; 
+    display: block;
+    top: -240px;
+    left: -243px; 
+    transform: scale(0.15) rotate(-30deg);
+    z-index: 1;
+  }
+/*=====================================>text*/
+.content{
+    position: relative;
+    padding: 10px;
+    font-family: MadaniArabic-Light ;
+    font-size: var(--size-s) ;
+    background-color: white;
+}
+
+.pink{
+    color: rgb(217, 101, 140);
+}
+.purple{
+    color: purple;
+}
+/*list*/
+ul{
+    list-style-type: none; 
+  }
+li{
+    padding-bottom: 10px;
+}
+  
+ul li::before{
+    content: '';
+    display: inline-block;
+    width: 20px; 
+    height: 20px; 
+    background-image: url('sparkles.png'); 
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    margin-left: 20px;
+  }
+/*=====================================>border*/
+.line{
+    position: absolute;
+    bottom: 30%;
+    left: -1px;
+    width: 7px; 
+    height: 30px; 
+    background-color: white;
+    border-radius: 10px;
+    z-index: 1000000;
+}
+.styled-box {
+    position: relative;
+    padding: 20px;
+    background: #fff; 
+    border: 7px solid black; 
+    border-radius: 20px; 
+    margin: 20px auto;
+    box-shadow: 0px 25px 0px 1px #db719b;
+}
+.styled-box::before,
+.styled-box::after {
+    content: '';
+    position: absolute;
+    height: 7px; /* height of the gap */
+    z-index: 1;
+    border-radius: 5px;
+}
+
+/* Top-right cut */
+.styled-box::before {
+    background: black; 
+    width: 50px; /* width of the gap */ 
+    top: -3px;
+    right: 12%;
+    border: 30px solid white;
+    border-top: none;
+    border-bottom: none;
+    transform: translateY(-50%);
+}
+
+/* Bottom-left cut */
+.styled-box::after {
+    background: white;  
+    width: 30px; /* width of the gap */
+    bottom: -3px;
+    left: 15%;
+    transform: translateY(50%);
+}
+
+
+
+
+
+
+
