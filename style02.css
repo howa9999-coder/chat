@@ -27,7 +27,7 @@
 /*var*/
 :root {
     /*size*/
-    --size-xs: 14px  ;
+    --size-xs: 12px  ;
     --size-s: 19.6px;
     --size-m: 22.2px;
     --size-l: 25px;
@@ -35,8 +35,7 @@
 
  body{
     background-color: pink;
-
-    height: 120vh;
+    height: 100vh;
 } 
 /*=====================================>container & container01*/
 .container{
@@ -44,8 +43,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
+
 .container01{
     position: relative;
     padding: 0;
@@ -71,6 +70,11 @@
     background-color: white;
 }
 @media(max-width: 600px){
+    .container{
+        position: relative; /* Ensure <.line> stays in the correct position */
+        display: block;
+
+    }
     .content{
         padding: 5px;
         font-size: var(--size-xs) ;
@@ -105,11 +109,11 @@ ul li::before{
 .line{
     position: absolute;
     bottom: 30%;
-    left: -1px;
+    left: -0px;
     width: 7.5px; 
     height: 30px; 
     background-color: white;
-    border-radius: 10px;
+/*     border-radius: 10px; */
     z-index: 1000000;
 }
 .styled-box {
@@ -127,16 +131,16 @@ ul li::before{
     position: absolute;
     height: 8px; /* height of the gap */
     z-index: 1;
-    border-radius: 5px;
 }
 
 /* Top-right cut */
 .styled-box::before {
     background: black; 
     width: 50px; /* width of the gap */ 
-    top: -3.9px;
+    top: -3.5px;
     right: 12%;
     border: 30px solid white;
+    /* border-radius: 30px; */
     border-top: none;
     border-bottom: none;
     transform: translateY(-50%);
@@ -149,6 +153,8 @@ ul li::before{
     bottom: -3px;
     left: 15%;
     transform: translateY(50%);
+/*     border-radius: 5px;
+ */
 }
 
 
