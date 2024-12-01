@@ -61,7 +61,7 @@ body {
   align-items: center;
   height: 100vh; 
 }
-
+/*================================>containers*/
 .container {
   width: 77%;
   display: flex;
@@ -77,6 +77,14 @@ body {
   margin-bottom: 15px;
 }
 
+  .container01::after{
+    content: url('دورة التجويد (42).png');
+    position: absolute;
+    transform: scale(0.6);
+    bottom: -90px;
+    left: -10px;
+  }
+/*================================>content*/
   .message {
     background-color:#f4fafa;
     color: black;
@@ -96,14 +104,6 @@ body {
     bottom: -30px;
     left: 50px;
   }
-
-  .container01::after{
-    content: url('دورة التجويد (42).png');
-    position: absolute;
-    transform: scale(0.6);
-    bottom: -90px;
-    left: -10px;
-  }
   
   li {
     position: relative;
@@ -118,7 +118,7 @@ body {
     font-size: var(--space-s); 
   }
 
-
+/*================================>img*/
   .woman{
     position: absolute;
     margin-left: 10px;
