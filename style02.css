@@ -70,6 +70,12 @@
     font-size: var(--size-s) ;
     background-color: white;
 }
+@media(max-width: 600px){
+    .content{
+        padding: 5px;
+        font-size: var(--size-xs) ;
+    }
+}
 
 .pink{
     color: rgb(217, 101, 140);
@@ -100,7 +106,7 @@ ul li::before{
     position: absolute;
     bottom: 30%;
     left: -1px;
-    width: 7px; 
+    width: 7.5px; 
     height: 30px; 
     background-color: white;
     border-radius: 10px;
@@ -119,7 +125,7 @@ ul li::before{
 .styled-box::after {
     content: '';
     position: absolute;
-    height: 7px; /* height of the gap */
+    height: 8px; /* height of the gap */
     z-index: 1;
     border-radius: 5px;
 }
@@ -128,7 +134,7 @@ ul li::before{
 .styled-box::before {
     background: black; 
     width: 50px; /* width of the gap */ 
-    top: -3px;
+    top: -3.9px;
     right: 12%;
     border: 30px solid white;
     border-top: none;
