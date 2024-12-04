@@ -34,7 +34,8 @@
   }
 
  body{
-    background-color: pink;
+    background: linear-gradient(45deg, rgb(248, 95, 120), white, rgb(255, 109, 133));
+    background-size: 200% 200%;
     height: 100vh;
 } 
 /*=====================================>container & container01*/
