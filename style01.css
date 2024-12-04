@@ -26,14 +26,16 @@
 }
 /*general*/
 body {
-    justify-content: center;
-  
+
       font-family: MadaniArabic-Regular;
       background-color: #ecceeb;
       display: flex;
+      justify-content: center;
       height: 100vh;
       margin: 0;
       direction: rtl;
+      background: linear-gradient(45deg, rgb(248, 95, 120), white, rgb(255, 109, 133));
+      background-size: 200% 200%;
       
     }
   /*================================>containers*/  
