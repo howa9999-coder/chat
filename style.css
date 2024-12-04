@@ -55,7 +55,8 @@ body {
 
 
   font-family:MadaniArabic-Regular;
-  background-color: rgb(183, 130, 183);
+  background: linear-gradient(45deg, rgb(248, 95, 120), white, rgb(255, 109, 133));
+  background-size: 200% 200%;
   display: flex;
   justify-content: center;
   align-items: center;
