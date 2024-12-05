@@ -464,17 +464,21 @@ body{ /*container effect*/
 .section-content .text{
     text-align: center;
     line-height: normal;
-    font-size: (--size-s);
+    font-size: var(--size-s);
+}
+.pinkShadow{
+    box-shadow: 12px 12px 2px 1px #db719b;
 }
 @media(max-width: 900px){
 
    .section-content{
     width: 90%;
    }
+   .pinkShadow{
+    box-shadow: 8px 5px 2px 1px #db719b;
 }
-.pinkShadow{
-    box-shadow: 12px 12px 2px 1px #db719b;
 }
+
 
   /*==============table*/
   .table-container {
