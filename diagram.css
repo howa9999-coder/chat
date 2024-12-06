@@ -1,0 +1,402 @@
+/* @link https://utopia.fyi/space/calculator?c=320,18,1.2,1240,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+    --space-3xs: clamp(0.3125rem, 0.3125rem + 0vw, 0.3125rem);
+    --space-2xs: clamp(0.5625rem, 0.5408rem + 0.1087vw, 0.625rem);
+    --space-xs: clamp(0.875rem, 0.8533rem + 0.1087vw, 0.9375rem);
+    --space-s: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
+    --space-m: clamp(1.6875rem, 1.6223rem + 0.3261vw, 1.875rem);
+    --space-l: clamp(2.25rem, 2.163rem + 0.4348vw, 2.5rem);
+    --space-xl: clamp(3.375rem, 3.2446rem + 0.6522vw, 3.75rem);
+    --space-2xl: clamp(4.5rem, 4.3261rem + 0.8696vw, 5rem);
+    --space-3xl: clamp(6.75rem, 6.4891rem + 1.3043vw, 7.5rem);
+  
+    /* One-up pairs */
+    --space-3xs-2xs: clamp(0.3125rem, 0.2038rem + 0.5435vw, 0.625rem);
+    --space-2xs-xs: clamp(0.5625rem, 0.4321rem + 0.6522vw, 0.9375rem);
+    --space-xs-s: clamp(0.875rem, 0.7446rem + 0.6522vw, 1.25rem);
+    --space-s-m: clamp(1.125rem, 0.8641rem + 1.3043vw, 1.875rem);
+    --space-m-l: clamp(1.6875rem, 1.4049rem + 1.413vw, 2.5rem);
+    --space-l-xl: clamp(2.25rem, 1.7283rem + 2.6087vw, 3.75rem);
+    --space-xl-2xl: clamp(3.375rem, 2.8098rem + 2.8261vw, 5rem);
+    --space-2xl-3xl: clamp(4.5rem, 3.4565rem + 5.2174vw, 7.5rem);
+  
+    /* Custom pairs */
+    --space-s-l: clamp(1.125rem, 0.6467rem + 2.3913vw, 2.5rem);
+  }
+  /*fonts*/
+  @font-face {
+  font-family: 'MadaniArabic-Regular';
+  src: url('fonts/alfont_com_Madani-Arabic-Regular.ttf') format('truetype');
+  font-weight: medium;
+  font-style: normal;
+  }
+  
+  @font-face {
+  font-family: 'MadaniArabic-Medium';
+  src: url('fonts/alfont_com_Madani-Arabic-Medium.ttf') format('truetype');
+  font-weight: medium;
+  font-style: normal;
+  }
+  @font-face {
+  font-family: 'MadaniArabic-Light';
+  src: url('fonts/alfont_com_Madani-Arabic-Light.ttf') format('truetype');
+  font-weight: medium;
+  font-style: normal;
+  }
+  @font-face {
+  font-family: 'Arimo';
+  src: url('fonts/Arimo-Italic.ttf') format('truetype');
+  font-weight: medium;
+  font-style: normal;
+  }
+
+*{
+    font-family: MadaniArabic-Regular ;
+}
+body {
+    background-color: rgb(183, 130, 183);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+  
+  .diagram-container{
+    position: relative;
+display: inline;
+    border: 2px solid green;
+    background-color: aquamarine;
+  }  
+
+  .diagram-circle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /*center circle*/
+    width: 200px; /*change the width and height only to resize the whole content*/
+    height: 200px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .diagram-image{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+  }
+.diagram-title{
+    text-align: center;
+    font-size: var(--space-m);
+    font-weight: 600;
+}
+/*big circle*/
+.diagram-circle::after{
+    content: '';
+   position: absolute;
+    width: 130%; 
+    height: 130%;
+    border-radius: 50%; 
+    background-color: transparent;
+    border: 2px dashed white;
+
+}
+/*points*/
+.diagram-circle li:nth-child(1),
+.diagram-circle li:nth-child(2),
+.diagram-circle li:nth-child(3),
+.diagram-circle li:nth-child(4),
+.diagram-circle li:nth-child(5),
+.diagram-circle li:nth-child(6){
+    list-style: none;
+    position: absolute;
+    height: 8px;/*change only width & height to resize the point elements*/
+    width: 8px;
+    border-radius: 50%;
+}
+.diagram-circle li:nth-child(1),
+.diagram-circle li:nth-child(2),
+.diagram-circle li:nth-child(3),
+.diagram-circle li:nth-child(4){
+    background: white;
+}
+.diagram-circle li:nth-child(5),
+.diagram-circle li:nth-child(6){
+    background: pink;
+}
+/*point position*/
+.diagram-circle li:nth-child(1){
+    top: -0px ;
+    left: 0px;
+    transform: translate(50%, 50%); /*to center the circle*/
+
+}
+.diagram-circle li:nth-child(2){
+    top: -0px ;
+    right: 0px;/*5*/
+    transform: translate(-50%, 50%); /*to center the circle*/
+
+}
+.diagram-circle li:nth-child(3){
+left: 0px;
+ bottom: 0px;
+ transform: translate(50%, -50%); /*to center the circle*/
+
+
+}
+.diagram-circle li:nth-child(4){
+    bottom: 0px;
+    right: 0px;
+    transform: translate(-50%, -50%); /*to center the circle*/
+
+}
+.diagram-circle li:nth-child(5){
+    top: 50% ;
+    left: -20%;
+    transform: translate(50%, -50%); /*to center the circle*/
+
+}
+.diagram-circle li:nth-child(6){
+    top: 50% ;
+    right: -20%;
+    transform: translate(-50%, -50%); /*to center the circle*/
+
+}
+/*small circles*/
+  .diagram-circle li:nth-child(1)::before,
+.diagram-circle li:nth-child(2)::before,
+.diagram-circle li:nth-child(3)::before,
+.diagram-circle li:nth-child(4)::before,
+.diagram-circle li:nth-child(5)::before,
+.diagram-circle li:nth-child(6)::before {
+    content: ''; 
+    height: 300%;
+    width: 300%;
+    background-color: transparent;        
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+  }
+.diagram-circle li:nth-child(1)::before,
+.diagram-circle li:nth-child(2)::before,
+.diagram-circle li:nth-child(3)::before,
+.diagram-circle li:nth-child(4)::before {
+    border: 2px dotted white;
+  }
+  .diagram-circle li:nth-child(5)::before,
+  .diagram-circle li:nth-child(6)::before {
+      border: 2px dotted pink;
+    }
+
+/*box content*/
+.diagram-circle li:nth-child(1)::after{
+    content:'لام (ال) ولام الفعل' ;
+  }
+  .diagram-circle li:nth-child(2)::after{
+    content:'النون الساكنة والتنوين' ;
+  }
+  .diagram-circle li:nth-child(3)::after{
+    content:'أقسام المد وأحكامه وأقسام المد الازم' ;
+  }
+  .diagram-circle li:nth-child(4)::after{
+    content:'الميم الساكنة' ;
+  }
+  .diagram-circle li:nth-child(5)::after{
+    content:'المماثلان والمتقاربان والمتجانسان' ;
+  }
+  .diagram-circle li:nth-child(6)::after{
+    content:'الميم والنون المشددين' ;
+  }
+  /*box styling*/
+.diagram-circle li:nth-child(1)::after,
+.diagram-circle li:nth-child(5)::after,
+.diagram-circle li:nth-child(3)::after,
+.diagram-circle li:nth-child(2)::after,
+.diagram-circle li:nth-child(4)::after,
+.diagram-circle li:nth-child(6)::after {
+    display: flex;           
+    align-items: center;     
+    justify-content: center;
+    text-align: center;
+    height: 70px;
+    width: 230px;
+    position: absolute;
+    border-radius: 50px;
+    font-size: var(--space-xs-s);
+    font-weight: 600;
+
+  }
+  .diagram-circle li:nth-child(1)::after,
+.diagram-circle li:nth-child(5)::after,
+.diagram-circle li:nth-child(3)::after {
+    top: 50%;
+    left: -400%;
+    transform: translate(-100%, -50%);
+  }
+  .diagram-circle li:nth-child(2)::after,
+.diagram-circle li:nth-child(4)::after,
+.diagram-circle li:nth-child(6)::after {
+    top: 50%;
+    right: -1600%;
+    transform: translate(60%, -50%);
+  }
+  .diagram-circle li:nth-child(1)::after,
+  .diagram-circle li:nth-child(3)::after,
+  .diagram-circle li:nth-child(2)::after,
+  .diagram-circle li:nth-child(4)::after{
+      background-color: white;
+    }
+    .diagram-circle li:nth-child(5)::after,
+    .diagram-circle li:nth-child(6)::after{
+        background-color: pink;
+      }
+/*arrow*/
+.arrow1, .arrow3, .arrow5{
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-left: 20px solid white;
+    top: 0px;  
+    left: -450%;
+    transform: translate(0%, -50%);  
+}
+.arrow2, .arrow4, .arrow6{
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-right: 20px solid white;
+    top: 0px; 
+    right: -480%;
+    transform: translate(0%, -30%);  
+}
+.arrow5{
+    border-left: 20px solid pink;
+}
+.arrow6{
+    border-right: 20px solid pink;
+}
+
+@media(max-width: 1200px){
+    /*circle*/
+    .diagram-circle{
+        transform: translate(-50%, -50%); /*center circle*/
+        width: 90px; /*change the width and height only to resize the whole content*/
+        height: 90px;
+        border-radius: 50px;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+      .diagram-circle::after{
+        content: '';
+       position: absolute;
+        width: 105%; 
+        height: 105%;
+        border-radius: 50px; 
+        background-color: transparent;
+        border: 2px dashed white;
+    
+    }
+    .diagram-image{
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+      }
+    .diagram-title{
+        font-size: var(--space-xs);
+        font-weight: 600;
+    
+    }
+      /*box styling*/
+.diagram-circle li:nth-child(1)::after,
+.diagram-circle li:nth-child(5)::after,
+.diagram-circle li:nth-child(3)::after,
+.diagram-circle li:nth-child(2)::after,
+.diagram-circle li:nth-child(4)::after,
+.diagram-circle li:nth-child(6)::after {
+    width: 150px;
+    height: 45px;
+    font-size: var(--space-xs);
+    font-weight: 500;
+  }
+
+
+/*points*/
+.diagram-circle li:nth-child(1){
+    top: -10% ;
+    left: 30%;
+    transform: translate(50%, 50%); /*to center the circle*/
+
+}
+.diagram-circle li:nth-child(2){
+    top: -10% ;
+    right: 30%;/*5*/
+    transform: translate(-50%, 50%); /*to center the circle*/
+
+}
+.diagram-circle li:nth-child(3){
+left: 30%;
+ bottom: -10%;
+ transform: translate(50%, -50%); /*to center the circle*/
+
+
+}
+.diagram-circle li:nth-child(4){
+    right: 30%;
+    bottom: -10%;
+    transform: translate(-50%, -50%); /*to center the circle*/
+
+}
+.diagram-circle li:nth-child(5){
+    top: 50% ;
+    left: -12%;
+    transform: translate(50%, -50%); /*to center the circle*/
+
+}
+.diagram-circle li:nth-child(6){
+    top: 50% ;
+    right: -12%;
+    transform: translate(-50%, -50%); /*to center the circle*/
+
+}
+/*small circles*/
+.diagram-circle li:nth-child(1)::before,
+.diagram-circle li:nth-child(2)::before,
+.diagram-circle li:nth-child(3)::before,
+.diagram-circle li:nth-child(4)::before,
+.diagram-circle li:nth-child(5)::before,
+.diagram-circle li:nth-child(6)::before {
+    content: ''; 
+    height: 120%;
+    width: 120%;
+    background-color: transparent;        
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+  }
+
+
+    .diagram-circle li:nth-child(1),
+.diagram-circle li:nth-child(2),
+.diagram-circle li:nth-child(3),
+.diagram-circle li:nth-child(4),
+.diagram-circle li:nth-child(5),
+.diagram-circle li:nth-child(6){
+    list-style: none;
+    position: absolute;
+    height: 5px;/*change only width & height to resize the point elements*/
+    width: 5px;
+    border-radius: 50%;
+}
+}
