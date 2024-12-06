@@ -285,7 +285,7 @@ left: 0px;
     border-right: 20px solid pink;
 }
 
-@media(max-width: 1200px){
+@media(max-width: 900px){
     /*circle*/
     .diagram-circle{
         transform: translate(-50%, -50%); /*center circle*/
@@ -326,6 +326,48 @@ left: 0px;
     height: 45px;
     font-size: var(--space-xs);
     font-weight: 500;
+  }
+  .diagram-circle li:nth-child(5)::after,
+  .diagram-circle li:nth-child(6)::after {
+      width: 90px;
+      height: 85px;
+      font-size: var(--space-xs);
+      font-weight: 500;
+      border-radius: 20px;
+    }
+  .diagram-circle li:nth-child(1)::after
+  {
+    top: -500%;
+    left: 100%;
+    transform: translate(-100%, -50%);
+  }
+  .diagram-circle li:nth-child(3)::after
+  {
+    top: 580%;
+    left: 100%;
+    transform: translate(-100%, -50%);
+  }
+  .diagram-circle li:nth-child(2)::after
+  {
+    top: -500%;
+    right: -1000%;
+    transform: translate(60%, -50%);
+  }
+  .diagram-circle li:nth-child(4)::after
+  {
+    top: 580%;
+    right: -1000%;
+    transform: translate(60%, -50%);
+  }
+.diagram-circle li:nth-child(5)::after {
+    top: 50%;
+    left: -400%;
+    transform: translate(-100%, -50%);
+  }
+  .diagram-circle li:nth-child(6)::after {
+    top: 50%;
+    right: -480%;
+    transform: translate(100%, -50%);
   }
 
 
@@ -398,5 +440,45 @@ left: 30%;
     height: 5px;/*change only width & height to resize the point elements*/
     width: 5px;
     border-radius: 50%;
+}
+/*arrow*/
+.arrow1{
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-left: 20px solid white;
+
+    transform: translate(0%, -50%) rotate(40deg);  
+}
+.arrow3{
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-left: 20px solid white;
+    top: 150%;
+    left: -300%;
+    transform: translate(0%, -50%) rotate(-50deg);  
+}
+.arrow2{
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-right: 20px solid white;
+    top: -10%; 
+    right: -470%;
+    transform: translate(0%, -30%) rotate(-50deg);  
+}
+.arrow4{
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-right: 20px solid white;
+    top: 50%; 
+    right: -300%;
+    transform: translate(0%, -30%) rotate(40deg);  
 }
 }
