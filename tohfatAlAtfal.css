@@ -110,7 +110,7 @@ body{ /*container effect*/
 }
 
 .subTitle{
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     margin-top: 20px;
 
 }
@@ -136,16 +136,58 @@ body{ /*container effect*/
 
 
 .tohfatatfal_programme {
+  position: relative;
     text-align: center; /* Centre le contenu horizontalement */
   }
   
   .tohfatatfal_programme img {
-    max-width: 60%; /* Réduit la taille de l'image proportionnellement à la taille de l'écran */
+    max-width: 100%; /* Réduit la taille de l'image proportionnellement à la taille de l'écran */
     height: auto;    /* Maintient les proportions de l'image */
     display: inline-block;
   }
-  
 
+  /*box styling*/
+ .tohfatatfal_programme li:nth-child(1),
+ .tohfatatfal_programme li:nth-child(5),
+ .tohfatatfal_programme li:nth-child(3),
+ .tohfatatfal_programme li:nth-child(2),
+ .tohfatatfal_programme li:nth-child(4),
+ .tohfatatfal_programme li:nth-child(6) {
+  content:'لام (ال) ولام الفعل' ;
+    display: flex;           
+    align-items: center;     
+    justify-content: center;
+    text-align: center;
+    height: 70px;
+    width: 230px;
+    position: absolute;
+    border-radius: 50px;
+    font-size: var(--space-xs-s);
+    font-weight: 600;
+
+  }
+    
+  .tohfatatfal_programme li:nth-child(1){
+
+    top: 0;
+    left: 0;
+ 
+  }
+  .tohfatatfal_programme li:nth-child(2){
+    content:'النون الساكنة والتنوين' ;
+  }
+  .tohfatatfal_programme li:nth-child(3){
+    content:'أقسام المد وأحكامه وأقسام المد الازم' ;
+  }
+  .tohfatatfal_programme li:nth-child(4){
+    content:'الميم الساكنة' ;
+  }
+  .tohfatatfal_programme li:nth-child(5){
+    content:'المماثلان والمتقاربان والمتجانسان' ;
+  }
+  .tohfatatfal_programme li:nth-child(6){
+    content:'الميم والنون المشددين' ;
+  }
 
 /*Main title*/
 .logo-title {
@@ -940,22 +982,23 @@ width: 99%;
 /*list*/
 
 .message-left-icons > ul{
-    list-style-type: none; 
-  }
-.message-left-icons > ul > li{
-    padding-bottom: 10px;
+  list-style-type: none; 
 }
-  
+.message-left-icons > ul > li{
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
 .message-left-icons > ul li::before{
-    content: '';
-    display: inline-block;
-    width: 20px; 
-    height: 20px; 
-    background-image: url('images/sparkles.png'); 
-    background-size: contain; 
-    background-repeat: no-repeat; 
-    margin-left: 20px;
-  }
+  content: '';
+  display: inline-block;
+  width: 20px; 
+  height: 20px; 
+  background-image: url('images/sparkles.png'); 
+  background-size: contain; 
+  background-repeat: no-repeat; 
+  margin-left: 20px;
+}
 /*=====================================>border*/
 .line{
     position: absolute;
@@ -1007,6 +1050,24 @@ width: 99%;
 /*     border-radius: 5px;
  */
 }
+/*list*/
+.styled-box > ul{
+  list-style-type: none; 
+}
+.styled-box > li{
+  padding-bottom: 10px;
+}
+
+.styled-box > ul li::before{
+  content: '';
+  display: inline-block;
+  width: 20px; 
+  height: 20px; 
+  background-image: url('images/sparkles.png'); 
+  background-size: contain; 
+  background-repeat: no-repeat; 
+  margin-left: 20px;
+}
 @media(max-width: 580px){
     .container-sub-styled::before{
         top: -45px;
@@ -1033,4 +1094,431 @@ width: 99%;
     .styled-box::after {
         width: 30px; /* width of the gap */
     }
+}
+
+
+/*================================================Diagram========================*/
+.diagram-container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: block;
+  margin: auto;
+  width: 100%;
+  height: 300px;
+}  
+
+.diagram-circle{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /*center circle*/
+  width: 200px; /*change the width and height only to resize the whole content*/
+  height: 200px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.diagram-image{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+.diagram-title{
+  text-align: center;
+  font-size: var(--space-m);
+  font-weight: 600;
+}
+/*big circle*/
+.diagram-circle::after{
+  content: '';
+ position: absolute;
+  width: 130%; 
+  height: 130%;
+  border-radius: 50%; 
+  background-color: transparent;
+  border: 2px dashed white;
+
+}
+/*points*/
+.diagram-circle li:nth-child(1),
+.diagram-circle li:nth-child(2),
+.diagram-circle li:nth-child(3),
+.diagram-circle li:nth-child(4),
+.diagram-circle li:nth-child(5),
+.diagram-circle li:nth-child(6){
+  list-style: none;
+  position: absolute;
+  height: 8px;/*change only width & height to resize the point elements*/
+  width: 8px;
+  border-radius: 50%;
+}
+.diagram-circle li:nth-child(1),
+.diagram-circle li:nth-child(2),
+.diagram-circle li:nth-child(3),
+.diagram-circle li:nth-child(4){
+  background: white;
+}
+.diagram-circle li:nth-child(5),
+.diagram-circle li:nth-child(6){
+  background: pink;
+}
+/*point position*/
+.diagram-circle li:nth-child(1){
+  top: -0px ;
+  left: 0px;
+  transform: translate(50%, 50%); /*to center the circle*/
+
+}
+.diagram-circle li:nth-child(2){
+  top: -0px ;
+  right: 0px;/*5*/
+  transform: translate(-50%, 50%); /*to center the circle*/
+
+}
+.diagram-circle li:nth-child(3){
+left: 0px;
+bottom: 0px;
+transform: translate(50%, -50%); /*to center the circle*/
+
+
+}
+.diagram-circle li:nth-child(4){
+  bottom: 0px;
+  right: 0px;
+  transform: translate(-50%, -50%); /*to center the circle*/
+
+}
+.diagram-circle li:nth-child(5){
+  top: 50% ;
+  left: -20%;
+  transform: translate(50%, -50%); /*to center the circle*/
+
+}
+.diagram-circle li:nth-child(6){
+  top: 50% ;
+  right: -20%;
+  transform: translate(-50%, -50%); /*to center the circle*/
+
+}
+/*small circles*/
+.diagram-circle li:nth-child(1)::before,
+.diagram-circle li:nth-child(2)::before,
+.diagram-circle li:nth-child(3)::before,
+.diagram-circle li:nth-child(4)::before,
+.diagram-circle li:nth-child(5)::before,
+.diagram-circle li:nth-child(6)::before {
+  content: ''; 
+  height: 300%;
+  width: 300%;
+  background-color: transparent;        
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+.diagram-circle li:nth-child(1)::before,
+.diagram-circle li:nth-child(2)::before,
+.diagram-circle li:nth-child(3)::before,
+.diagram-circle li:nth-child(4)::before {
+  border: 2px dotted white;
+}
+.diagram-circle li:nth-child(5)::before,
+.diagram-circle li:nth-child(6)::before {
+    border: 2px dotted pink;
+  }
+
+/*box content*/
+.diagram-circle li:nth-child(1)::after{
+  content:'لام (ال) ولام الفعل' ;
+}
+.diagram-circle li:nth-child(2)::after{
+  content:'النون الساكنة والتنوين' ;
+}
+.diagram-circle li:nth-child(3)::after{
+  content:'أقسام المد وأحكامه وأقسام المد الازم' ;
+}
+.diagram-circle li:nth-child(4)::after{
+  content:'الميم الساكنة' ;
+}
+.diagram-circle li:nth-child(5)::after{
+  content:'المماثلان والمتقاربان والمتجانسان' ;
+}
+.diagram-circle li:nth-child(6)::after{
+  content:'الميم والنون المشددين' ;
+}
+/*box styling*/
+.diagram-circle li:nth-child(1)::after,
+.diagram-circle li:nth-child(5)::after,
+.diagram-circle li:nth-child(3)::after,
+.diagram-circle li:nth-child(2)::after,
+.diagram-circle li:nth-child(4)::after,
+.diagram-circle li:nth-child(6)::after {
+  display: flex;           
+  align-items: center;     
+  justify-content: center;
+  text-align: center;
+  height: 70px;
+  width: 230px;
+  position: absolute;
+  border-radius: 50px;
+  font-size: var(--space-xs-s);
+  font-weight: 600;
+
+}
+.diagram-circle li:nth-child(1)::after,
+.diagram-circle li:nth-child(5)::after,
+.diagram-circle li:nth-child(3)::after {
+  top: 50%;
+  left: -400%;
+  transform: translate(-100%, -50%);
+}
+.diagram-circle li:nth-child(2)::after,
+.diagram-circle li:nth-child(4)::after,
+.diagram-circle li:nth-child(6)::after {
+  top: 50%;
+  right: -1600%;
+  transform: translate(60%, -50%);
+}
+.diagram-circle li:nth-child(1)::after,
+.diagram-circle li:nth-child(3)::after,
+.diagram-circle li:nth-child(2)::after,
+.diagram-circle li:nth-child(4)::after{
+    background-color: white;
+  }
+  .diagram-circle li:nth-child(5)::after,
+  .diagram-circle li:nth-child(6)::after{
+      background-color: pink;
+    }
+/*arrow*/
+.arrow1, .arrow3, .arrow5{
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-left: 20px solid white;
+  top: 0px;  
+  left: -450%;
+  transform: translate(0%, -50%);  
+}
+.arrow2, .arrow4, .arrow6{
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-right: 20px solid white;
+  top: 0px; 
+  right: -480%;
+  transform: translate(0%, -30%);  
+}
+.arrow5{
+  border-left: 20px solid pink;
+}
+.arrow6{
+  border-right: 20px solid pink;
+}
+
+@media(max-width: 830px){
+  /*circle*/
+  .diagram-container{
+    height: 250px;
+  }
+  .diagram-circle{
+      transform: translate(-50%, -50%); /*center circle*/
+      width: 90px; /*change the width and height only to resize the whole content*/
+      height: 90px;
+      border-radius: 50px;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+    .diagram-circle::after{
+      content: '';
+     position: absolute;
+      width: 105%; 
+      height: 105%;
+      border-radius: 50px; 
+      background-color: transparent;
+      border: 2px dashed white;
+  
+  }
+  .diagram-image{
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+    }
+  .diagram-title{
+      font-size: var(--space-xs);
+      font-weight: 600;
+  
+  }
+    /*box styling*/
+.diagram-circle li:nth-child(1)::after,
+.diagram-circle li:nth-child(3)::after,
+.diagram-circle li:nth-child(2)::after,
+.diagram-circle li:nth-child(4)::after {
+  width: 150px;
+  height: 55px;
+  font-size: var(--space-xs);
+  font-weight: 500;
+}
+.diagram-circle li:nth-child(5)::after,
+.diagram-circle li:nth-child(6)::after {
+    width: 90px;
+    height: 85px;
+    font-size: var(--space-xs);
+    font-weight: 500;
+    border-radius: 20px;
+  }
+.diagram-circle li:nth-child(1)::after
+{
+  top: -600%;
+  left: 100%;
+  transform: translate(-100%, -50%);
+}
+.diagram-circle li:nth-child(3)::after
+{
+  top: 880%;
+  left: 100%;
+  transform: translate(-100%, -50%);
+}
+.diagram-circle li:nth-child(2)::after
+{
+  top: -600%;
+  right: -1000%;
+  transform: translate(60%, -50%);
+}
+.diagram-circle li:nth-child(4)::after
+{
+  top: 880%;
+  right: -1000%;
+  transform: translate(60%, -50%);
+}
+.diagram-circle li:nth-child(5)::after {
+  top: 50%;
+  left: -400%;
+  transform: translate(-100%, -50%);
+}
+.diagram-circle li:nth-child(6)::after {
+  top: 50%;
+  right: -480%;
+  transform: translate(100%, -50%);
+}
+
+
+/*points*/
+.diagram-circle li:nth-child(1){
+  top: -10% ;
+  left: 30%;
+  transform: translate(50%, 50%); /*to center the circle*/
+
+}
+.diagram-circle li:nth-child(2){
+  top: -10% ;
+  right: 30%;/*5*/
+  transform: translate(-50%, 50%); /*to center the circle*/
+
+}
+.diagram-circle li:nth-child(3){
+left: 30%;
+bottom: -10%;
+transform: translate(50%, -50%); /*to center the circle*/
+
+
+}
+.diagram-circle li:nth-child(4){
+  right: 30%;
+  bottom: -10%;
+  transform: translate(-50%, -50%); /*to center the circle*/
+
+}
+.diagram-circle li:nth-child(5){
+  top: 50% ;
+  left: -12%;
+  transform: translate(50%, -50%); /*to center the circle*/
+
+}
+.diagram-circle li:nth-child(6){
+  top: 50% ;
+  right: -12%;
+  transform: translate(-50%, -50%); /*to center the circle*/
+
+}
+/*small circles*/
+.diagram-circle li:nth-child(1)::before,
+.diagram-circle li:nth-child(2)::before,
+.diagram-circle li:nth-child(3)::before,
+.diagram-circle li:nth-child(4)::before,
+.diagram-circle li:nth-child(5)::before,
+.diagram-circle li:nth-child(6)::before {
+  content: ''; 
+  height: 120%;
+  width: 120%;
+  background-color: transparent;        
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.diagram-circle li:nth-child(1),
+.diagram-circle li:nth-child(2),
+.diagram-circle li:nth-child(3),
+.diagram-circle li:nth-child(4),
+.diagram-circle li:nth-child(5),
+.diagram-circle li:nth-child(6){
+  list-style: none;
+  position: absolute;
+  height: 5px;/*change only width & height to resize the point elements*/
+  width: 5px;
+  border-radius: 50%;
+}
+/*arrow*/
+.arrow1{
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-left: 20px solid white;
+
+  transform: translate(0%, -50%) rotate(40deg);  
+}
+.arrow3{
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-left: 20px solid white;
+  top: 300%;
+  left: -300%;
+  transform: translate(0%, -50%) rotate(-50deg);  
+}
+.arrow2{
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-right: 20px solid white;
+  top: -10%; 
+  right: -470%;
+  transform: translate(0%, -30%) rotate(-50deg);  
+}
+.arrow4{
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-right: 20px solid white;
+  top: 0%; 
+  right: -300%;
+  transform: translate(0%, 30%) rotate(50deg);  
+}
 }
