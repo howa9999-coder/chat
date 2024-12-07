@@ -984,13 +984,13 @@ padding-right: 20px;
 }
 @media(max-width: 900px){
     .styled-box > .text{
-        font-size: var(--space-xs);
+        font-size: var(--space-s);
         line-height: normal;
         text-align: start;
 }
 .message-left-icons > .text{
 
-    font-size: var(--space-xs);
+    font-size: var(--space-s);
         line-height: normal;
         text-align: start;
 }
@@ -1617,3 +1617,4 @@ transform: translate(50%, -50%); /*to center the circle*/
 }
 }
 
+/* all li*/
