@@ -184,10 +184,10 @@ body{ /*container effect*/
     content:'الميم الساكنة' ;
   }
   .tohfatatfal_programme li:nth-child(5){
-    content:'المتماثلان والمتقاربان والمتجانسان' ;
+    content:'المماثلان والمتقاربان والمتجانسان' ;
   }
   .tohfatatfal_programme li:nth-child(6){
-    content:'الميم والنون المشددتين' ;
+    content:'الميم والنون المشددين' ;
   }
 
 /*Main title*/
@@ -587,7 +587,6 @@ transform: scale(0.5) translateY(-50%);
 p {
 margin: 0; 
 font-size: var(--space-s); 
-color: #333;
 }
 .star{
 height: 20px;
@@ -598,6 +597,10 @@ filter: drop-shadow(0px 5px 5px rgb(237, 237, 14));
 .info .text{
     line-height: normal;
 }
+.info  ul{
+  list-style-type: none; 
+}
+
 /*Dashed line*/
 .line-container {
 position: relative;
@@ -642,27 +645,55 @@ transform: translateX(-50%);
 }
 
 
-
-
 @media(max-width:1000px){
 .container{
   width: 100%;
 }
 .info{
     display: flex;
-    flex-direction: column; /*or column*/
+    flex-direction: column; 
     align-items: center;
-    width: 100%;
-  
+
+    width: 100%;  
   }
+
   .info01, .info02{
     padding: 10px !important; 
     align-items: start;
     gap: 20px; 
   }
+  .info01::before, .info02::before{
+    content: '';
+    display: inline;
+    transform: scale(0.5) translateY(-50%);
+    }
+  .info01 ul li::before{
+    content: '';
+    display: inline-block;
+    width: 30px; 
+    height: 30px; 
+    background-image: url(images/badge.png); 
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    margin-left: 30px;
+  }
+  .info02 ul li::before{
+    content: '';
+    display: inline-block;
+    width: 30px; 
+    height: 30px; 
+    background-image: url(images/badge.png); 
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    margin-left: 30px;
+  }
+
+
+    
   .title-container{
     top: -20px;
     width: 80%;
+    border-radius: 15px;
   }
   .title{
     font-weight: 400;
@@ -1616,5 +1647,3 @@ transform: translate(50%, -50%); /*to center the circle*/
   left: -500%;
 }
 }
-
-/* all li*/
