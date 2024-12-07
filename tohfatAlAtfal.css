@@ -1443,13 +1443,13 @@ transform: translate(50%, -50%); /*to center the circle*/
   transform: translate(60%, -50%);
 }
 .diagram-circle li:nth-child(5)::after {
-  top: 50%;
+  top: 52%;
   left: -400%;
   transform: translate(-100%, -50%);
 }
 .diagram-circle li:nth-child(6)::after {
   top: 50%;
-  right: -460%;
+  right: -450%;
   transform: translate(100%, -50%);
 }
 
