@@ -99,7 +99,6 @@ body{ /*container effect*/
     margin: auto;
     margin-top: 30px;
     margin-bottom: 30px;
-   border: 2px solid black;
    width: 90%;
  }
 .pink-banner {
@@ -273,7 +272,6 @@ body{ /*container effect*/
     margin: 0;
     margin-top: 100px !important;
     width: 70%;
-     border: 2px solid red;
      margin: auto;
 }
 @media(max-width: 1600px){
@@ -1412,11 +1410,11 @@ transform: translate(50%, -50%); /*to center the circle*/
 }
 .diagram-circle li:nth-child(5)::after,
 .diagram-circle li:nth-child(6)::after {
-    width: 120px;
-    height: 70px;
+    width: 95px;
+    height: 80px;
     font-size: var(--space-xs);
     font-weight: 500;
-    border-radius: 50px;
+    border-radius: 20px;
   }
 .diagram-circle li:nth-child(1)::after
 {
@@ -1444,7 +1442,7 @@ transform: translate(50%, -50%); /*to center the circle*/
 }
 .diagram-circle li:nth-child(5)::after {
   top: 52%;
-  left: -400%;
+  left: -450%;
   transform: translate(-100%, -50%);
 }
 .diagram-circle li:nth-child(6)::after {
@@ -1562,6 +1560,10 @@ transform: translate(50%, -50%); /*to center the circle*/
   top: 0%; 
   right: -300%;
   transform: translate(0%, 30%) rotate(50deg);  
+}
+.arrow5{
+  top: 50%;
+  left: -500%;
 }
 }
 
