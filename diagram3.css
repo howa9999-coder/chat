@@ -1,0 +1,504 @@
+/* @link https://utopia.fyi/space/calculator?c=320,18,1.2,1240,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+    --space-3xs: clamp(0.3125rem, 0.3125rem + 0vw, 0.3125rem);
+    --space-2xs: clamp(0.5625rem, 0.5408rem + 0.1087vw, 0.625rem);
+    --space-xs: clamp(0.875rem, 0.8533rem + 0.1087vw, 0.9375rem);
+    --space-s: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
+    --space-m: clamp(1.6875rem, 1.6223rem + 0.3261vw, 1.875rem);
+    --space-l: clamp(2.25rem, 2.163rem + 0.4348vw, 2.5rem);
+    --space-xl: clamp(3.375rem, 3.2446rem + 0.6522vw, 3.75rem);
+    --space-2xl: clamp(4.5rem, 4.3261rem + 0.8696vw, 5rem);
+    --space-3xl: clamp(6.75rem, 6.4891rem + 1.3043vw, 7.5rem);
+  
+    /* One-up pairs */
+    --space-3xs-2xs: clamp(0.3125rem, 0.2038rem + 0.5435vw, 0.625rem);
+    --space-2xs-xs: clamp(0.5625rem, 0.4321rem + 0.6522vw, 0.9375rem);
+    --space-xs-s: clamp(0.875rem, 0.7446rem + 0.6522vw, 1.25rem);
+    --space-s-m: clamp(1.125rem, 0.8641rem + 1.3043vw, 1.875rem);
+    --space-m-l: clamp(1.6875rem, 1.4049rem + 1.413vw, 2.5rem);
+    --space-l-xl: clamp(2.25rem, 1.7283rem + 2.6087vw, 3.75rem);
+    --space-xl-2xl: clamp(3.375rem, 2.8098rem + 2.8261vw, 5rem);
+    --space-2xl-3xl: clamp(4.5rem, 3.4565rem + 5.2174vw, 7.5rem);
+  
+    /* Custom pairs */
+    --space-s-l: clamp(1.125rem, 0.6467rem + 2.3913vw, 2.5rem);
+  }
+  /*fonts*/
+  @font-face {
+  font-family: 'MadaniArabic-Regular';
+  src: url('fonts/alfont_com_Madani-Arabic-Regular.ttf') format('truetype');
+  font-weight: medium;
+  font-style: normal;
+  }
+  
+  @font-face {
+  font-family: 'MadaniArabic-Medium';
+  src: url('fonts/alfont_com_Madani-Arabic-Medium.ttf') format('truetype');
+  font-weight: medium;
+  font-style: normal;
+  }
+  @font-face {
+  font-family: 'MadaniArabic-Light';
+  src: url('fonts/alfont_com_Madani-Arabic-Light.ttf') format('truetype');
+  font-weight: medium;
+  font-style: normal;
+  }
+  @font-face {
+  font-family: 'Arimo';
+  src: url('fonts/Arimo-Italic.ttf') format('truetype');
+  font-weight: medium;
+  font-style: normal;
+  }
+
+
+/*=======================CONTAINER ALL============================*/
+.container-all{
+  position: relative;
+  top: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  margin-bottom: 250px;
+}
+  /*========================== DIAGRAM=========================*/
+.diagram-container{
+    position: relative;
+  display: inline;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  }  
+
+  .diagram-circle{
+    position: relative;
+    top: 100px;
+    width: 200px; 
+    height: 200px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+/* circle*/
+.diagram-circle::after {
+  content: '';
+  position: absolute;
+  width: 120%; 
+  height: 120%;
+  border-radius: 50%; 
+  border: 3px dashed white;
+  
+ 
+}
+
+.diagram-title{
+    text-align: center;
+    font-size: var(--space-m);
+    font-weight: 600;
+    color: rgb(97, 19, 19);
+}
+.diagram-circle li{
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 60px;
+  width: 230px;
+  border-radius: 50px;
+  background-color: rgb(253, 162, 177);
+  padding-right: 15px;
+
+}
+.diagram-image{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding: 3px;
+}
+
+.diagram-circle li:nth-child(1){
+  position: absolute;
+  top: -50px;
+  left: 230px;
+  background-color: white;
+}
+.diagram-circle li:nth-child(2){
+  position: absolute;
+  top: 55px;
+  left: 270px;
+}
+.diagram-circle li:nth-child(3){
+  position: absolute;
+  bottom: -20px;
+  left: 240px;
+  background-color: white;
+}
+.diagram-circle li:nth-child(4){
+  position: absolute;
+  top: -50px;
+  left: -280px;
+  background-color: white;
+}
+.diagram-circle li:nth-child(5){
+  position: absolute;
+  top: 55px;
+  left: -310px;
+}
+.diagram-circle li:nth-child(6){
+  position: absolute;
+  bottom: -20px;
+  left: -290px;
+  background-color: white;
+}
+
+/*markers*/
+.diagram-circle li:nth-child(1)::before,
+.diagram-circle li:nth-child(2)::before,
+.diagram-circle li:nth-child(3)::before,
+.diagram-circle li:nth-child(4)::before,
+.diagram-circle li:nth-child(5)::before,
+.diagram-circle li:nth-child(6)::before{
+    content: ''; 
+    height: 10px;
+    width: 10px;
+    background-color: white;        
+    position: absolute;
+    border-radius: 50%;
+    z-index: 100;
+  }
+.diagram-circle li:nth-child(2)::before,
+.diagram-circle li:nth-child(5)::before{
+    content: ''; 
+    height: 10px;
+    width: 10px;
+    background-color: rgb(253, 162, 177);        
+    position: absolute;
+    border-radius: 50%;
+    z-index: 100;
+  }
+
+    /*small circle*/
+.diagram-circle li:nth-child(1)::after,
+.diagram-circle li:nth-child(2)::after,
+.diagram-circle li:nth-child(3)::after,
+.diagram-circle li:nth-child(4)::after,
+.diagram-circle li:nth-child(5)::after,
+.diagram-circle li:nth-child(6)::after{
+    content: ''; 
+    height: 20px;
+    width: 20px;
+    background-color: transparent;      
+    position: absolute;
+    border-radius: 50%;
+    border: 2px dashed white;
+    z-index: 100000;
+    transform: translate(-25%, -30%); /* child 1 and child 2*/
+  }
+  .diagram-circle li:nth-child(3)::after{
+    transform: translate(-25%, 30%);
+  }
+   /*position*/
+  .diagram-circle li:nth-child(1)::before,
+  .diagram-circle li:nth-child(1)::after{
+    top: 60px;
+    left: -50px;
+  }
+  .diagram-circle li:nth-child(2)::before,
+  .diagram-circle li:nth-child(2)::after{
+    top: 30px;
+    left: -55px;
+  }
+  .diagram-circle li:nth-child(2)::after{
+    border: 2px dashed rgb(253, 162, 177);
+  }
+  .diagram-circle li:nth-child(3)::before,
+  .diagram-circle li:nth-child(3)::after{
+    bottom: 45px;
+    left: -45px;
+  }
+
+  .diagram-circle li:nth-child(4)::before,
+  .diagram-circle li:nth-child(4)::after{
+    top: 60px;
+    right: -55px;
+  }
+  .diagram-circle li:nth-child(4)::after{
+    transform: translate(25%, -30%);
+  }
+  .diagram-circle li:nth-child(5)::before,
+  .diagram-circle li:nth-child(5)::after{
+    top: 30px;
+    right: -50px;
+  }
+  .diagram-circle li:nth-child(5)::after{
+    transform: translate(25%, -30%);
+    border: 2px dashed rgb(253, 162, 177);
+  }
+  .diagram-circle li:nth-child(6)::before,
+  .diagram-circle li:nth-child(6)::after{
+    bottom: 45px;
+    right: -50px;
+  }
+  .diagram-circle li:nth-child(6)::after{
+    transform: translate(25%, 30%);
+  }
+ 
+  /*arrow*/
+
+.arrow{
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    z-index: 0;
+
+}
+.arrow1{
+  top: 40px; 
+  border-right: 20px solid white;
+  left: -20px;
+  transform: rotate(-25deg);
+}
+.arrow2{
+  top: 20px; 
+  border-right: 20px solid rgb(253, 162, 177);
+  left: -25px;
+  transform: rotate(-10deg);
+}
+.arrow3{
+  top: 15px; 
+  border-right: 20px solid white;
+  left: -25px;
+  transform: rotate(15deg);
+}
+.arrow4{
+  top: 40px; 
+  border-left: 20px solid white;
+  right: -20px;
+  transform: rotate(25deg);
+}
+.arrow5{
+  top: 20px; 
+  border-left: 20px solid rgb(253, 162, 177);
+  right: -25px;
+  transform: rotate(-0);
+}
+.arrow6{
+  top: 15px; 
+  border-left: 20px solid white;
+  right: -25px;
+  transform: rotate(-15deg);
+}
+
+
+  
+/*==================================md screen==========================*/
+@media(max-width:1100px){
+  .container-all{
+    transform: scale(0.75);
+    height: 30px;
+    margin-bottom: 200px;
+  }
+}
+
+/*==================================sm screen==========================*/
+@media(max-width:650px){
+    .container-all{
+        transform: scale(0.9);
+        height: 100px;
+        margin-bottom: 250px;
+      } 
+
+.diagram-circle{
+  width: 120px; /*change the width and height only to resize the whole content*/
+  height: 120px;
+}
+
+/*big circle*/
+.diagram-circle::after {
+width: 110%; 
+height: 110%;
+}
+
+.diagram-title{
+  text-align: center;
+  font-size: var(--space-s);
+  font-weight: 600;
+  color: rgb(97, 19, 19);
+}
+.diagram-circle li{
+height: 80px;
+width: 140px;
+border-radius: 30px;
+background-color: rgb(253, 162, 177);
+text-align: center;
+font-size: var(--space-xs-s);
+font-size: 600;
+
+}
+img{
+width: 50px;
+height: 50px;
+border-radius: 50%;
+padding: 3px;
+}
+
+.diagram-circle li:nth-child(1){
+position: absolute;
+top: -100px;
+left: 90px;
+}
+.diagram-circle li:nth-child(2){
+position: absolute;
+top: 15px;
+left: 150px;
+height: 90px;
+width: 120px;
+}
+.diagram-circle li:nth-child(3){
+position: absolute;
+bottom: -100px;
+left: 90px;
+}
+.diagram-circle li:nth-child(4){
+position: absolute;
+top: -100px;
+right: 90px;
+}
+.diagram-circle li:nth-child(5){
+position: absolute;
+top: 15px;
+right: 150px;
+height: 90px;
+width: 120px;
+
+}
+.diagram-circle li:nth-child(6){
+position: absolute;
+bottom: -100px;
+right: 90px;
+}
+
+/*markers*/
+.diagram-circle li:nth-child(1)::before,
+.diagram-circle li:nth-child(2)::before,
+.diagram-circle li:nth-child(3)::before,
+.diagram-circle li:nth-child(4)::before,
+.diagram-circle li:nth-child(5)::before,
+.diagram-circle li:nth-child(6)::before{
+  height: 8px; /*mod*/
+  width: 8px; /*mod*/
+
+}
+.diagram-circle li:nth-child(2)::before,
+.diagram-circle li:nth-child(5)::before{
+  height: 8px; /*mod*/
+  width: 8px; /*mod*/
+}
+
+  /*small circle*/
+.diagram-circle li:nth-child(1)::after,
+.diagram-circle li:nth-child(2)::after,
+.diagram-circle li:nth-child(3)::after,
+.diagram-circle li:nth-child(4)::after,
+.diagram-circle li:nth-child(5)::after,
+.diagram-circle li:nth-child(6)::after{
+  height: 0; /* mod*/
+  width: 0; /* mod*/
+  border: none; /* mod*/
+}
+
+ /*position*/
+.diagram-circle li:nth-child(1)::before{
+  top: 95px;
+  left: -5px;
+}
+.diagram-circle li:nth-child(2)::before{
+  top: 40px;
+  left: -25px;
+}
+
+.diagram-circle li:nth-child(3)::before{
+  top: -20px;
+  left: -5px;
+}
+
+.diagram-circle li:nth-child(4)::before{
+  top: 95px;
+  right: -5px;
+}
+
+.diagram-circle li:nth-child(5)::before{
+  top: 40px;
+  right: -25px;
+}
+
+.diagram-circle li:nth-child(6)::before{
+  top: -20px;
+  right: -5px;
+
+}
+
+/*arrow*/
+
+.arrow{
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  z-index: -10;
+
+}
+.arrow1{
+top: 75px; 
+border-right: 20px solid white;
+left: 0px;
+transform: rotate(-50deg);
+}
+.arrow2{
+top: 37px; 
+border-right: 20px solid rgb(253, 162, 177);
+left: -20px;
+transform: rotate(-0deg);
+}
+.arrow3{
+top: -15px; 
+border-right: 20px solid white;
+left: -5px;
+transform: rotate(50deg);
+}
+.arrow4{
+top: 75px; 
+border-left: 20px solid white;
+right: -0px;
+transform: rotate(50deg);
+}
+.arrow5{
+top: 37px; 
+border-left: 20px solid rgb(253, 162, 177);
+right: -20px;
+transform: rotate(-0);
+}
+.arrow6{
+top: -15px; 
+border-left: 20px solid white;
+right: -5px;
+transform: rotate(-50deg);
+}
+}
+/*==============================xms ====================================================*/
+@media(max-width:650px){
+    .container-all{
+        transform: scale(0.7);
+        height: 50px;
+        margin-bottom: 200px;
+      } 
+    }
