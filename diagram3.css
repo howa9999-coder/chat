@@ -222,13 +222,13 @@
   .diagram-circle li:nth-child(3)::before,
   .diagram-circle li:nth-child(3)::after{
     bottom: 45px;
-    left: -45px;
+    left: -50px;
   }
 
   .diagram-circle li:nth-child(4)::before,
   .diagram-circle li:nth-child(4)::after{
     top: 60px;
-    right: -55px;
+    right: -70px;
   }
   .diagram-circle li:nth-child(4)::after{
     transform: translate(25%, -30%);
@@ -236,7 +236,7 @@
   .diagram-circle li:nth-child(5)::before,
   .diagram-circle li:nth-child(5)::after{
     top: 30px;
-    right: -50px;
+    right: -65px;
   }
   .diagram-circle li:nth-child(5)::after{
     transform: translate(25%, -30%);
@@ -245,7 +245,7 @@
   .diagram-circle li:nth-child(6)::before,
   .diagram-circle li:nth-child(6)::after{
     bottom: 45px;
-    right: -50px;
+    right: -70px;
   }
   .diagram-circle li:nth-child(6)::after{
     transform: translate(25%, 30%);
@@ -423,26 +423,26 @@ right: 90px;
 }
 .diagram-circle li:nth-child(2)::before{
   top: 40px;
-  left: -25px;
+  left: -35px;
 }
 
 .diagram-circle li:nth-child(3)::before{
-  top: -20px;
+  top: -15px;
   left: -5px;
 }
 
 .diagram-circle li:nth-child(4)::before{
-  top: 95px;
+  top: 93px;
   right: -5px;
 }
 
 .diagram-circle li:nth-child(5)::before{
   top: 40px;
-  right: -25px;
+  right: -30px;
 }
 
 .diagram-circle li:nth-child(6)::before{
-  top: -20px;
+  top: -15px;
   right: -5px;
 
 }
