@@ -495,7 +495,7 @@ transform: rotate(-50deg);
 }
 }
 /*==============================xms ====================================================*/
-@media(max-width:650px){
+@media(max-width:450px){
     .container-all{
         transform: scale(0.7);
         height: 50px;
