@@ -426,16 +426,14 @@ transform: translateX(-50%);
 
 }
 
-
 /*=====================================>Styled box*/
 .line{
     position: absolute;
     bottom: 30%;
-    left: -0px;
+    left: 20px;
     width: 7.5px; 
     height: 30px; 
     background-color: white;
-/*     border-radius: 10px; */
     z-index: 1000000;
 }
 
