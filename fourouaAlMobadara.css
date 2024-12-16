@@ -86,13 +86,6 @@ body {
 }
 
 
-.fleur2 {
-    position: absolute;
-    left: 0; /* Positionner la fleur à gauche */
-    top: 70vh; /* Ajustement pour garder la fleur en bas */
-    width: 10vw; /* Taille plus petite pour la fleur */
-    height: auto;
-}
 
 /*=======================CONTAINER ALL============================*/
 .container-all{
@@ -806,11 +799,37 @@ display: none;
 }
 
 
-@media(max-width: 500px){
+@media(max-width: 600px){
     .container-all{
       flex-direction: column;
       gap: 30px;
       transform: translateY(-75%) scale(0.9);
   
     }
+}
+@media(max-width: 550px){
+    .container-all{
+      flex-direction: column;
+      gap: 30px;
+      transform: translateY(-75%) scale(0.8);
+  
+    }
+}
+
+@media(max-width: 350px){
+    .container-all{
+      flex-direction: column;
+      gap: 30px;
+      transform: translateY(-75%) scale(0.6);
+  
+    }
+}
+
+.fleur2 {
+    position: absolute;
+    left: 0; /* Positionner la fleur à gauche */
+    bottom: 5vh; /* Ajustement pour garder la fleur en bas */
+    left: 5vh;
+    width: 10vw; /* Taille plus petite pour la fleur */
+    height: auto;
 }
