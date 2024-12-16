@@ -829,8 +829,8 @@ display: none;
 .fleur2 {
     position: absolute;
     left: 0; /* Positionner la fleur à gauche */
-    bottom: 5vh; /* Ajustement pour garder la fleur en bas */
-    left: 5vh;
+    bottom: 20vh; /* Ajustement pour garder la fleur en bas */
+    left: 10vh;
     width: 10vw; /* Taille plus petite pour la fleur */
     height: auto;
 }
