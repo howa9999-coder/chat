@@ -97,8 +97,8 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin: auto;
-  transform:  scale(1.8); /*to center all elements*/
+  transform: translateY(-80%)  scale(1.8); /*to center all elements*/
+
   gap: 50px; /* فرع التجويد وفرع الحفظ*/
 }
   /*==========================RIGHT DIAGRAM=========================*/
@@ -747,15 +747,15 @@ display: none;
  
   /*position*/
   .diagram-circle-left li:nth-child(1)::before{
-    top: 30px;
+    top: 35px;
     right: -35px;
   }
   .diagram-circle-left li:nth-child(2)::before{
     top: -25px;
-    right: 100px;
+    right: 105px;
   }
   .diagram-circle-left li:nth-child(3)::before{
-    top: 30px;
+    top: 35px;
     right: 165px;
   }
 
@@ -778,7 +778,7 @@ display: none;
     .arrow-left2{
       border-bottom: 20px solid white;
       top:-20px;
-      right:95px;
+      right:100px;
       transform: rotate(-0deg);
     }
     .arrow-left3{
@@ -812,7 +812,7 @@ display: none;
     .container-all{
       flex-direction: column;
       gap: 30px;
-      transform: translateY(-75%) scale(0.7);
+      transform: translateY(-75%) scale(0.8);
   
     }
 }
@@ -821,7 +821,7 @@ display: none;
     .container-all{
       flex-direction: column;
       gap: 30px;
-      transform: translateY(-75%) scale(0.4);
+      transform: translateY(-75%) scale(0.55);
   
     }
 }
@@ -829,8 +829,8 @@ display: none;
 .fleur2 {
     position: absolute;
     left: 0; /* Positionner la fleur à gauche */
-    bottom: 20vh; /* Ajustement pour garder la fleur en bas */
-    left: 10vh;
+    bottom: 5vh; /* Ajustement pour garder la fleur en bas */
+    left: 5vh;
     width: 10vw; /* Taille plus petite pour la fleur */
     height: auto;
 }
