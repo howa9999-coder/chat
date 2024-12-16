@@ -821,7 +821,7 @@ display: none;
     .container-all{
       flex-direction: column;
       gap: 30px;
-      transform: translateY(-75%) scale(0.5);
+      transform: translateY(-75%) scale(0.4);
   
     }
 }
