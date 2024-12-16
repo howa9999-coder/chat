@@ -812,7 +812,7 @@ display: none;
     .container-all{
       flex-direction: column;
       gap: 30px;
-      transform: translateY(-75%) scale(0.8);
+      transform: translateY(-75%) scale(0.7);
   
     }
 }
