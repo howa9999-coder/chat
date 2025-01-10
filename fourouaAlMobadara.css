@@ -85,6 +85,14 @@ body {
     z-index: -1;
 }
 
+.fleur2 {
+  position: absolute;
+  left: 0; /* Positionner la fleur à gauche */
+  bottom: 5vh; /* Ajustement pour garder la fleur en bas */
+  left: 5vh;
+  width: 10vw; /* Taille plus petite pour la fleur */
+  height: auto;
+}
 
 
 /*=======================CONTAINER ALL============================*/
@@ -478,359 +486,60 @@ a{
 }
 
 /*==================================1100 screen==========================*/
-/*700px*/
-@media(max-width: 1100px){
-  .container-all{
-    flex-direction: column;
-    gap: 30px;
-    transform: translateY(-70%) scale(1.35);
+@media(max-width:1200px){
 
+
+  .container-all{
+    position: relative;
+    width: 100%;
+    max-width: 1530px;
+  
+     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-15%)  scale(0.9); /*to center all elements*/
+  
+    gap: 100px; /* فرع التجويد وفرع الحفظ*/
   }
-  .diagram-title{
-    text-align: center;
-    font-size: var(--space-s);
-    font-weight: 600;
-    color: rgb(97, 19, 19);
 }
-  /*======================RIGHT DIAGRAM=============================*/
+@media(max-width:800px){
+
+
+  .container-all{
+    position: relative;
+    width: 100%;
+    max-width: 1530px;
+  
+     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-15%)  scale(0.8); /*to center all elements*/
+  
+    gap: 150px; /* فرع التجويد وفرع الحفظ*/
+  }
+}
+@media(max-width:600px){
+  .container-all{
+    position: relative;
+    width: 100%;
+    max-width: 1530px;
+  
+     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-10%)  scale(0.7); /*to center all elements*/
+  
+    gap: 200px; /* فرع التجويد وفرع الحفظ*/
+  }
   .diagram-container{
     position: relative;
   display: inline;
-  }  
-
-  .diagram-circle{
-    position: relative;
-    top: 100px;
-    width: 100px; /*change the width and height only to resize the whole content*/
-    height: 100px;
-    background-color: white;
-    border-radius: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-/*     transform: translateX(50%) ;
- */  }
-
-/*big circle*/
-.diagram-circle::after {
-  content: '';
-  position: absolute;
-  width: 120%; 
-  height: 120%;
-  border-radius: 50%; 
-  left: -10px;
-  top: -10px;
-  background: conic-gradient(
-    white 0deg,
-    white 90deg,
-      transparent 90deg,
-      transparent 270deg, 
-      white 270deg, 
-      white 360deg 
-  );
-  mask: radial-gradient(circle, transparent 69%, white 69%);
-  -webkit-mask: radial-gradient(circle, transparent 69%, white 69%);
-}
-
-.diagram-circle li{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: row-reverse;
-  height: 60px;
-  width: 210px;
-  border-radius: 50px;
-  background-color: rgb(253, 162, 177);
-}
-img{
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  padding: 3px;
-}
-a{
-  text-decoration: none;
-  font-size: var(--space-xs);
-    font-weight: 600;
-    color: rgb(97, 19, 19);
-    cursor: pointer;
-    padding: 3px;
-}
-.diagram-circle li:nth-child(1){
-  position: absolute;
-  top: -80px;
-  left: -170px;
-  flex-direction: row;
-  width: 170px;
-
-
-}
-.diagram-circle li:nth-child(3){
-  position: absolute;
-  top: -80px;
-  left: 100px;
-  width: 170px;
-}
-.diagram-circle li:nth-child(2){
-  position: absolute;
-  top: 5px;
-  left: 134px;
-  width: 150px;
-}
-.diagram-circle li:nth-child(4){
-  position: absolute;
-  top: 5px;
-  left: -190px;
-  width: 150px;
-  flex-direction: row;
-
-
-}
-
-    /*small circle*/
-.diagram-circle li:nth-child(1)::after,
-.diagram-circle li:nth-child(2)::after,
-.diagram-circle li:nth-child(3)::after,
-.diagram-circle li:nth-child(4)::after{
-display: none;
+  transform: translateX(-70%);
   }
-  /*position*/
-  .diagram-circle li:nth-child(1)::before{
-    top: 75px;
-    right: -20px;
-  }
-
-  .diagram-circle li:nth-child(3)::before{
-    top: 75px;
-    left: -20px;
-  }
-  .diagram-circle li:nth-child(2)::before{
-    top: 35px;
-    left: -30px;
-  }
-  .diagram-circle li:nth-child(4)::before{
-    top: 35px;
-    right: -35px;
-  }
-
-
-  /*arrow*/
-
-.arrow{
-    position: absolute;
-    width: 0;
-    height: 0;
-    border: 10px solid transparent;
-    z-index: -10;
-
-}
-.arrow1{
-  top: 40px; 
-  border-right: 20px solid white;
-  right: -0px;
-  transform: rotate(-10deg);
-}
-.arrow3{
-    border-left: 20px solid white;
-  top: 40px; 
-  left: 0px;
-  transform: rotate(10deg);
-}
-.arrow2{
-  top: 25px; 
-  border-right: 20px solid rgb(253, 162, 177);
-
-  left: -25px;
-  transform: rotate(-0deg);
-}
-.arrow4{
-    top: 25px; 
-    border-left: 20px solid rgb(253, 162, 177);
-  right: -25px;
-  transform: rotate(0deg);
-}
-
-
-
-  /*======================LEFT DIAGRAM=============================*/
   .diagram-left-container{
-    position: relative;
-  display: inline;
-  }  
-
-  .diagram-circle-left{
-    position: relative;
-    top: 100px;
-    width: 100px; /*change the width and height only to resize the whole content*/
-    height: 100px;
-    background-color: white;
-    border-radius: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-/*     transform: translateX(-50%) ;
- */
-
+    transform: translateX(70%);
   }
-
-/*big circle*/
-.diagram-circle-left::after {
-  content: '';
-  position: absolute;
-  width: 120%; 
-  height: 120%;
-  border-radius: 50%; 
-  left: -10px;
-  top: -10px;
-  background: conic-gradient(
-    transparent 0deg,
-    transparent 90deg,
-      white 90deg,
-      white 270deg, 
-      transparent 270deg, 
-      transparent 360deg 
-  );
-  mask: radial-gradient(circle, transparent 69%, white 69%);
-  -webkit-mask: radial-gradient(circle, transparent 69%, white 69%);
-}
-
-/*box position*/
-.diagram-circle-left li{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 60px;
-  width: 210px;
-  border-radius: 50px;
-  background-color: rgb(253, 162, 177);
-}
-
-.diagram-circle-left li:nth-child(1){
-  position: absolute;
-  top: 5px;
-  left: -190px;
-  background-color: rgb(253, 162, 177);
-  width: 150px;
-  height: 75px;
-  transform: translateY(0%);
-
-}
-
-.diagram-circle-left li:nth-child(2){ 
-  position: absolute;
-  top: 130px;
-  left: -0px;
-  background-color: white;
-  transform: translateY(-0%) translateX(-25%);
-}
-.diagram-circle-left li:nth-child(3){
-  position: absolute;
-  top: 5px;
-  left: 130px;
-  background-color: rgb(253, 162, 177);
-  transform: translateY(0%);
-  width: 150px;
-  height: 75px;
-
-}
-
-
-      /*small circle*/
-.diagram-circle-left li:nth-child(1)::after,
-.diagram-circle-left li:nth-child(2)::after,
-.diagram-circle-left li:nth-child(3)::after{
-display: none;
-  }
-
- 
-  /*position*/
-  .diagram-circle-left li:nth-child(1)::before{
-    top: 35px;
-    right: -35px;
-  }
-  .diagram-circle-left li:nth-child(2)::before{
-    top: -25px;
-    right: 105px;
-  }
-  .diagram-circle-left li:nth-child(3)::before{
-    top: 35px;
-    right: 165px;
-  }
-
-    /*arrow*/
-
-    .arrow-left{
-        position: absolute;
-        width: 0;
-        height: 0;
-        border: 10px solid transparent;
-        z-index: -10;
-    
-    }
-    .arrow-left1{
-      top: 25px; 
-      border-left: 20px solid rgb(253, 162, 177);
-      right: -25px;
-      transform: rotate(10deg);
-    }
-    .arrow-left2{
-      border-bottom: 20px solid white;
-      top:-20px;
-      right:100px;
-      transform: rotate(-0deg);
-    }
-    .arrow-left3{
-      border-right:20px solid rgb(253, 162, 177);
-      top: 25px; 
-      right: 140px;
- 
-      transform: rotate(-10deg);
-    }
-}
-
-@media(max-width: 700px){
-    .container-all{
-      flex-direction: column;
-      gap: 30px;
-      transform: translateY(-75%) scale(1.15);
-  
-    }
-}
-
-
-@media(max-width: 600px){
-    .container-all{
-      flex-direction: column;
-      gap: 30px;
-      transform: translateY(-75%) scale(0.9);
-  
-    }
-}
-@media(max-width: 550px){
-    .container-all{
-      flex-direction: column;
-      gap: 30px;
-      transform: translateY(-75%) scale(0.8);
-  
-    }
-}
-
-@media(max-width: 350px){
-    .container-all{
-      flex-direction: column;
-      gap: 30px;
-      transform: translateY(-75%) scale(0.55);
-  
-    }
-}
-
-.fleur2 {
-    position: absolute;
-    left: 0; /* Positionner la fleur à gauche */
-    bottom: 5vh; /* Ajustement pour garder la fleur en bas */
-    left: 5vh;
-    width: 10vw; /* Taille plus petite pour la fleur */
-    height: auto;
 }
