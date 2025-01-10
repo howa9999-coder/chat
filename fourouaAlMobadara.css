@@ -532,7 +532,7 @@ a{
     align-items: center;
     transform: translateY(-10%)  scale(0.7); /*to center all elements*/
   
-    gap: 200px; /* فرع التجويد وفرع الحفظ*/
+    gap: 220px; /* فرع التجويد وفرع الحفظ*/
   }
   .diagram-container{
     position: relative;
