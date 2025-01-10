@@ -537,7 +537,7 @@ a{
   .diagram-container{
     position: relative;
   display: inline;
-  transform: translateX(-70%);
+  transform: translateX(-60%);
   }
   .diagram-left-container{
     transform: translateX(70%);
