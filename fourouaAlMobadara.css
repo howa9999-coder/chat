@@ -32,41 +32,76 @@
 
 /*======================Logo & Main title=======================*/
 
+/*Main title*/
+.logo-title {
+    display: inline-block;
+    margin: 20px;
+    position: absolute;
+    left: 30px;
+    top: 0;
 
-.logo-title::before{
-  content: ' فروع المبادرة ';
-  font-family:MadaniArabic-Regular ;
-  font-size: var(--space-xs);
-  font-weight: 600;
-  color: rgb(105, 22, 11);
-  padding: 10px 50px;
-  background-color: white;
-  position: absolute;
-  right: -150px;
-  top: 5px;
-  z-index: -1;
-  border-top-right-radius: 50px;
-  border-bottom-right-radius: 50px;
 }
-
+.logo-title::before{
+    content: 'دورة تحفة الأطفال ';
+    font-family:MadaniArabic-Regular ;
+    font-weight: 600;
+    color: rgb(105, 22, 11);
+    padding: 10px 50px;
+    background-color: white;
+    position: relative;
+    right: 12px;
+    top: 5px;
+    z-index: -1;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
 /*1/3 circle effect*/
 .logo-title::after{
-  content: '';
- position: absolute;
-  width: 80px; 
-  height: 80px;
-  border-radius: 50%; 
-  left: -12px;
-  top: -12px;
-  background: conic-gradient(
-      transparent 0deg,
-      transparent 240deg, /* 2/3 */
-      white 240deg, 
-      white 360deg /* 1/3 */
-  );
-  mask: radial-gradient(circle, transparent 62%, white 62%); /* Cuts out the inner circle */
-  -webkit-mask: radial-gradient(circle, transparent 62%, white 62%); /* Safari support */
+    content: '';
+   position: absolute;
+    width: 80px; 
+    height: 80px;
+    border-radius: 50%; 
+    left: -12px;
+    top: -12px;
+    background: conic-gradient(
+        transparent 0deg,
+        transparent 240deg, /* 2/3 */
+        white 240deg, 
+        white 360deg /* 1/3 */
+    );
+    mask: radial-gradient(circle, transparent 62%, white 62%); /* Cuts out the inner circle */
+    -webkit-mask: radial-gradient(circle, transparent 62%, white 62%); /* Safari support */
+
 }
+
+
+.logo-title img{
+    background-color: white;
+
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+}
+
+
+@media(max-width: 400px){
+    .logo-title {
+        display: inline-block;
+    
+        margin: 20px;
+        position: absolute;
+        left: 0;
+        top: 0;
+    
+    }
+    .logo-title::before{
+        font-weight: 500;
+        padding: 10px 20px;
+    }
+}
+
+
 
 /*================BODY==============================*/
 body {
