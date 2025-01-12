@@ -19,7 +19,7 @@
   font-weight: medium;
   font-style: normal;
   }
-  @font-face {
+  @font-face { 
   font-family: 'Arimo';
   src: url('fonts/Arimo-Italic.ttf') format('truetype');
   font-weight: medium;
@@ -50,7 +50,7 @@
     background-color: white;
     position: relative;
     right: 12px;
-    top: -35px;
+    top: -25px;
     z-index: -1;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
