@@ -529,10 +529,13 @@
   }
 
   @media(max-width:600px){
+    .logo-title{
+      transform: scale(0.8);
+    }
     .container-all{
       flex-direction: column;
       justify-content: center;
-      transform: translateY(-10%)  scale(0.6); /*to center all elements*/
+      transform: translateY(-5%)  scale(0.55); /*to center all elements*/
       gap: 220px; /* فرع التجويد وفرع الحفظ*/
     }
     .diagram-container{
