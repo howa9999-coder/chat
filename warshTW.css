@@ -1,29 +1,3 @@
-/* @link https://utopia.fyi/space/calculator?c=320,18,1.2,1240,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
-
-:root {
-    --space-3xs: clamp(0.3125rem, 0.3125rem + 0vw, 0.3125rem);
-    --space-2xs: clamp(0.5625rem, 0.5408rem + 0.1087vw, 0.625rem);
-    --space-xs: clamp(0.875rem, 0.8533rem + 0.1087vw, 0.9375rem);
-    --space-s: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
-    --space-m: clamp(1.6875rem, 1.6223rem + 0.3261vw, 1.875rem);
-    --space-l: clamp(2.25rem, 2.163rem + 0.4348vw, 2.5rem);
-    --space-xl: clamp(3.375rem, 3.2446rem + 0.6522vw, 3.75rem);
-    --space-2xl: clamp(4.5rem, 4.3261rem + 0.8696vw, 5rem);
-    --space-3xl: clamp(6.75rem, 6.4891rem + 1.3043vw, 7.5rem);
-  
-    /* One-up pairs */
-    --space-3xs-2xs: clamp(0.3125rem, 0.2038rem + 0.5435vw, 0.625rem);
-    --space-2xs-xs: clamp(0.5625rem, 0.4321rem + 0.6522vw, 0.9375rem);
-    --space-xs-s: clamp(0.875rem, 0.7446rem + 0.6522vw, 1.25rem);
-    --space-s-m: clamp(1.125rem, 0.8641rem + 1.3043vw, 1.875rem);
-    --space-m-l: clamp(1.6875rem, 1.4049rem + 1.413vw, 2.5rem);
-    --space-l-xl: clamp(2.25rem, 1.7283rem + 2.6087vw, 3.75rem);
-    --space-xl-2xl: clamp(3.375rem, 2.8098rem + 2.8261vw, 5rem);
-    --space-2xl-3xl: clamp(4.5rem, 3.4565rem + 5.2174vw, 7.5rem);
-  
-    /* Custom pairs */
-    --space-s-l: clamp(1.125rem, 0.6467rem + 2.3913vw, 2.5rem);
-  }
 
 /*font*/
 .font-family-regular-css{
@@ -68,14 +42,13 @@
  .logo-title::before{
   content: ' دورة قواعد التجويد (أصول ورش) ';
   font-family:MadaniArabic-Regular ;
-  font-size: var(--space-xs);
-  font-weight: 600;
+  font-size: 22px;
   color: rgb(105, 22, 11);
-  padding: 10px 50px;
+  padding: 10px 20px;
   background-color: white;
   position: absolute;
-  right: -270px;
-  top: 8px;
+  right: -330px;
+  top: 10px;
   z-index: -1;
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
@@ -88,8 +61,8 @@
   width: 80px; 
   height: 80px;
   border-radius: 50%; 
-  left: -12px;
-  top: -12px;
+  left: -10px;
+  top: -8px;
   background: conic-gradient(
       transparent 0deg,
       transparent 240deg, /* 2/3 */
@@ -267,11 +240,6 @@
         }
   }
 
-
-
-
-
-
 /*==================================================ICONS=*/
 .pink-marker::before{
   padding: 0;
@@ -284,7 +252,7 @@
   background-repeat: no-repeat; 
   margin-left: 20px;
   border-radius: 50%;
-  filter: drop-shadow(0px 5px 5px rgb(255, 156, 173)); 
+  filter: drop-shadow(5px 5px 5px rgb(255, 2, 44)); 
 
 }
 
@@ -292,12 +260,10 @@
   content: url('images/دورة التجويد (29).png'); /*taj al wakar  sticker*/
 position: relative;
 transform: scale(0.7);
-
 z-index: 1000000;
-
 }
 
-   .sun::before {
+.sun::before {
     content: '';
     position: relative;
     display: inline-block;
@@ -307,7 +273,7 @@ z-index: 1000000;
     background-size: contain; /* Ensure image scales */
     background-repeat: no-repeat;
  }
- .moon::before {
+.moon::before {
   content: '';
   position: relative;
   display: inline-block;
@@ -363,5 +329,39 @@ z-index: 1000000;
     position: relative;
     right: -20px;
     top: 10px;
+  }
+}
+@media(max-width: 650px){
+  .logo-title{
+    transform: scale(0.8);
+  }
+  .cad-icon-right{
+    transform: scale(0.7);
+    position: relative;
+    left: -30px;
+    top: -30px;
+  }
+  .cad-icon-left{
+    transform: scale(0.7);
+    position: relative;
+    right: -30px;
+    top: 60px;
+  }
+}
+@media(max-width: 450px){
+  .cad-container{
+    width: 400px !important;
+  }
+  .cad-icon-right{
+    transform: scale(0.7);
+    position: relative;
+    left: -30px;
+    top: -40px;
+  }
+  .cad-icon-left{
+    transform: scale(0.7);
+    position: relative;
+    right: -30px;
+    top: 60px;
   }
 }
