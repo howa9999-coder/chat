@@ -1,10 +1,4 @@
 
-/*font*/
-.font-family-regular-css{
-  font-family: MadaniArabic-Regular;
-  font-size: 19.6px;
-}
-
 
 @font-face {
     font-family: 'MadaniArabic-Regular';
@@ -36,6 +30,12 @@
 }
 
 
+/*font*/
+.font-family-regular-css{
+  font-family: MadaniArabic-Regular;
+  font-size: 19.6px;
+}
+
 /*======================Logo & Main title=======================*/
 
 
@@ -47,7 +47,7 @@
   padding: 10px 15px;
   background-color: white;
   position: absolute;
-  right: -330px;
+  right: -320px;
   top: 10px;
   z-index: -1;
   border-top-right-radius: 50px;
