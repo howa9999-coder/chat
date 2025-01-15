@@ -117,7 +117,7 @@
     position: absolute;
     transform: scale(0.4);
     top: -90px;
-    right: -60px;
+    right: -50px;
     border-radius: 50%;
 
       }
@@ -349,6 +349,12 @@ z-index: 1000000;
   }
 }
 @media(max-width: 450px){
+  .env-icon::after, .env-icon::before{
+    content: url('images/دورة التجويد (29).png'); /*taj al wakar  sticker*/
+  position: relative;
+  transform: scale(0.5);
+  z-index: 1000000;
+  }
   .cad-container{
     width: 400px !important;
   }
