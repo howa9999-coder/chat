@@ -112,7 +112,6 @@ box-shadow:
   margin: auto;
   margin-bottom: 10px;
 
-  overflow: hidden; /* Assurez-vous que les éléments ne débordent pas */
 }
 .diagram{
   max-width: 800px;
@@ -300,6 +299,9 @@ box-shadow:
   .cards-container{
     gap: 0px;
     width: 100%;
+  }
+  .textes{
+    font-size: 10px !important;
   }
   .hijabi{
     position: absolute;
