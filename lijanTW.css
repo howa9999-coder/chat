@@ -292,7 +292,7 @@ body {
 
 @media(max-width: 900px){
   .large-card{
-    height: 50px;
+    height: 60px;
     width: 100%;
   }
   .container{
@@ -328,7 +328,7 @@ body {
   }
   .hijabi-icon{
     display: inline-block;
-    width: 90px;
+    width: 80px;
   }
   .header{
     display: flex;
@@ -339,7 +339,7 @@ body {
 
   .modified{
     width: 80% !important;
-    height: 50px !important;
+    height: 60px !important;
   }
   .flip-card-front-modified{
     flex-direction: row-reverse;
