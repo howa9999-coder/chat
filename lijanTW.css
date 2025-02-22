@@ -393,14 +393,14 @@ body {
   }
 
   /* Button styles */
-  #popoverBtn, #popoverBtn2 {
+  #popoverBtn, #popoverBtn2, #popoverBtn3 {
       font-size: 11px;
       cursor: pointer;
   }
 
 
   /* Close button styles */
-  #closeBtn, #closeBtn2 {
+  #closeBtn, #closeBtn2, #closeBtn3 {
       font-size: 18px;
       cursor: pointer;
       border: none;
