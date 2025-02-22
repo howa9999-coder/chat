@@ -303,11 +303,11 @@ body {
   }
   .card{
     width: 140px;
-    height: 90px;
+    height: 95px;
     margin: 15px;
   }
   .titles{
-    font-size: 18px;
+    font-size: 16px;
   }
   .cards-container{
     gap: 0px;
@@ -360,6 +360,14 @@ body {
       z-index: 1000;
       border-radius: 8px;
   }
+@media(max-width: 500px){
+    .popover{
+        width: 75%;
+    }
+    .popover .textes{
+        font-size: 14px;
+    }
+}
 
   /* Styles for the overlay */
   .overlay-pink {
