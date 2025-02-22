@@ -45,7 +45,7 @@
                             <img src="images/icon5.png" style="width: 100px;" alt="">
                         </div>
                         <div class="whiteShadow flip-card-back">
-                            <span class="textes" style="font-size: 12px; margin-bottom: 10px;">أعضاءها هم المسؤولون عن:<br>- الإشراف على المجموعات (حلقات الحفظ والمراجعة ...)<br>- تسجيل حضور وغياب الطالبات</span>
+                            <span class="textes" style="font-size: 12px; margin-bottom: 10px;">أعضاءها هم المسؤولون عن:   <br>- تسجيل حضور وغياب الطالبات</span>
                             <button class="more" onclick="popoverbtn(popover1, overlay1)" id="popoverBtn">قراءة المزيد</button>
                         </div>
                     </div>
@@ -76,9 +76,20 @@
 
                         </div>
                         <div class="whiteShadow flip-card-back">
-                            <span class="textes">أعضاءها هم المسؤولون عن:<br> تصميم مختلف ما تحتاجه بقية اللجن (إعلانات الإختبارات التسجيل ...)<br>تصميم الفيديوهات (كتابة السيناريو، مونتاج...)</span>
+                            <span class="textes">أعضاءها هم المسؤولون عن:<br>
+                                - تصميم الفيديوهات (كتابة السيناريو, مونتاج ...) <br>
+                            </span>
+                            <button class="more" onclick="popoverbtn(popover3, overlay3)" id="popoverBtn3">قراءة المزيد</button>
                         </div>
                     </div>
+                </div>
+                                <div class="popover" id="popover3">
+                    <button onclick="closebtn(popover3, overlay3)" id="closeBtn3">x</button> <br>
+                    <span class="textes">أعضاءها هم المسؤولون عن:<br>
+                                - تصميم الفيديوهات (كتابة السيناريو, مونتاج ...) <br>
+                                - تصميم مختلف ما تحتاجه بقية اللجن (إعلانات الإختبارات , التسجيل ...)
+                    </span>
+                   
                 </div>
                 <!--6th card-->
                 <div class="flip-card card">
@@ -89,7 +100,7 @@
 
                         </div>
                         <div class="whiteShadow flip-card-back">
-                            <span class="textes" style="font-size: 12px; margin-bottom: 10px;">أعضاءها هم المسؤولون عن:<br>- تنظيم التسجيل الرسمي والاستثنائي (تسجيل الطالبات التواصل معهن ...)</span>
+                            <span class="textes" style="font-size: 12px; margin-bottom: 10px;">أعضاءها هم المسؤولون عن:<br>- التواصل مع الطالبات</span>
                             <button class="more" onclick="popoverbtn(popover2, overlay2)" id="popoverBtn2">قراءة المزيد</button>
                         </div>
                     </div>
@@ -144,6 +155,7 @@
     <!-- Overlay -->
     <div id="overlay" onclick="overlayBlack(popover1, overlay1)" class="overlay"></div>
     <div id="overlay2" onclick="overlayBlack(popover2, overlay2)" class="overlay"></div>
+    <div id="overlay3" onclick="overlayBlack(popover3, overlay3)" class="overlay"></div>
 
     <script>
         const popoverBtn = document.getElementById('popoverBtn');
@@ -152,6 +164,10 @@
         const closeBtn = document.getElementById('closeBtn');
         const popover2 = document.getElementById('popover2');
         const overlay2 = document.getElementById('overlay2');
+        const closeBtn2 = document.getElementById('closeBtn2');
+        const popover3 = document.getElementById('popover3');
+        const overlay3 = document.getElementById('overlay3');
+        const closeBtn3 = document.getElementById('closeBtn3');
 
 
 
