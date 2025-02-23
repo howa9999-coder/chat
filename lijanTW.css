@@ -82,6 +82,7 @@ box-shadow:
 -2px 15px 2px 1px black; /* Second shadow */
 }
 
+
 .container{
 height: 100%;
 width: 100%;
@@ -252,12 +253,7 @@ background-color: transparent;
 }
 @media(max-width: 900px){
 
-  .card{
-    width: 160px;
-    height: 110px;
-    margin: 10px;
-    margin-top: 20px;
-  }
+
   .textes {
     font-size: 12px !important; /* Définit la taille de la police */
     font-weight: 600;
@@ -294,7 +290,7 @@ background-color: transparent;
   height: 95px;
   margin: 15px;
 }
-.titles, .titles-large{
+.titles{
   font-size: 16px;
 }
 .cards-container{
@@ -323,6 +319,10 @@ background-color: transparent;
   .large-card{
     height: 60px;
     width: 100%;
+  }
+  .card{
+    width: 120px;
+    height: 95px;
   }
   .modified{
     width: 80% !important;
