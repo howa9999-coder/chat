@@ -112,7 +112,7 @@ margin: auto;
 margin-top: 0px;
 
 }
-.titles {
+.titles, .titles-large {
 color: #53001A;
 font-size: 25px; 
 font-family: 'Madani Arabic Medium';
@@ -245,6 +245,10 @@ background-color: transparent;
   .cards-container{
     width: 100%;
   }
+  .hijabi{
+    width: 200px; 
+    height: 100px;
+  }
 
 }
 @media(max-width: 900px){
@@ -274,21 +278,6 @@ background-color: transparent;
   border: 3px solid black;
 }
 }
-@media(max-width: 700px){
-.container{
-  width: 90%;
-}
-.hijabi{
-  width: 150px; 
-  height: 75px;
-}
-.large-card{
-  height: 60px;
-  width: 100%;
-}
-
-
-}
 
 @media(max-width: 900px){
 .large-card{
@@ -316,36 +305,47 @@ background-color: transparent;
 .textes{
   font-size: 11px !important;
 }
-
 .hijabi{
-  display: none;
-/*     width: 70px; 
-  height: 35px;
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  z-index: -1; */
+  width: 150px;
+  height: 75px;
 }
-.hijabi-icon{
-  display: inline-block;
-  width: 70px;
-}
+
 .header{
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 20px;
 }
-
-.modified{
-  width: 80% !important;
-  height: 60px !important;
 }
-.flip-card-front-modified{
-  flex-direction: row-reverse;
-  gap: 20px;
-}
-
+@media(max-width: 730px){
+  .container{
+    width: 90%;
+  }
+  .large-card{
+    height: 60px;
+    width: 100%;
+  }
+  .modified{
+    width: 80% !important;
+    height: 60px !important;
+  }
+  .flip-card-front-modified{
+    flex-direction: row-reverse;
+    gap: 20px;
+  }
+  .hijabi{
+    display: none;
+  /*     width: 70px; 
+    height: 35px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: -1; */
+  }
+  .hijabi-icon{
+    display: inline-block;
+    width: 70px;
+  }
 }
    /* Basic styles for the popover */
    .popover {
